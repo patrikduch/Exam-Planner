@@ -3,12 +3,13 @@ CREATE TABLE ProjectDetail (
     name VARCHAR(45) NOT NULL
 );
 
-CREATE TABLE User (
+CREATE TABLE user (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(100) NOT NULL,
   password VARCHAR(250) NOT NULL,
   role VARCHAR(150) NOT NULL
 );
+
 
 
 

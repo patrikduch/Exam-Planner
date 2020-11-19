@@ -32,16 +32,15 @@ final class HomepagePresenter extends BasePresenter
     public function renderDefault()
     {
 
-        if ($this->user->isInRole('admin')) {
-            $this->template->content = "Content for admin users.";
+        if ($this->user->isInRole('pedagog')) {
+            $this->template->content = "Pegagogové";
 
-        } else if ($this->user->isInRole('user')) {
-            $this->template->content = "Content for regular users.";
+        } else if ($this->user->isInRole('student')) {
+            $this->template->content = "Studenti";
         }
 
         else {
-
-            $this->template->content = "Content for guest users.";
+            $this->template->content = "Vítejte! Pro využivání tohoto univerzitního systému musíte být příhlášen.";
         }
 
     }
