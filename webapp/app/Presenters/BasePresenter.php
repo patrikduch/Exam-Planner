@@ -36,10 +36,12 @@ abstract class BasePresenter extends Presenter
         $this->template->projectDetail = $this->projectDetailRepository->getProjectName();
     }
 
-
+    /**
+     * Create Header component that is used as heading area for all presenter views.
+     * @return HeaderControl Instance of HeaderControl component.
+     */
     protected function createComponentHeaderControl(): HeaderControl
     {
-        //$headerControl = new HeaderControl();
         return $this->headerControlFactory->create();
     }
 }
