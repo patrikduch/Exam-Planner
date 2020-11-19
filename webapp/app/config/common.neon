@@ -31,3 +31,6 @@ services:
 
 	authenticator:
 	    class: App\Services\Authenticator
+
+	HeadercontrolFactory:
+	    class: App\Components\Shared\Skeleton\Header\HeaderControlFactory

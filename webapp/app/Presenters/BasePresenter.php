@@ -2,6 +2,8 @@
 
 namespace App\Presenters;
 
+use App\Components\Shared\Skeleton\Header\HeaderControl;
+use App\Components\Shared\Skeleton\Header\HeaderControlFactory;
 use App\Repositories\ProjectDetailRepository;
 use Nette\Application\UI\Presenter;
 
@@ -13,6 +15,9 @@ abstract class BasePresenter extends Presenter
 {
     /** @var ProjectDetailRepository @inject */
     public $projectDetailRepository;
+
+    /** @var HeaderControlFactory @inject */
+    public $headerControlFactory;
 
     /**
      * @throws \Nette\Application\AbortException
@@ -29,5 +34,12 @@ abstract class BasePresenter extends Presenter
         parent::beforeRender();
 
         $this->template->projectDetail = $this->projectDetailRepository->getProjectName();
+    }
+
+
+    protected function createComponentHeaderControl(): HeaderControl
+    {
+        //$headerControl = new HeaderControl();
+        return $this->headerControlFactory->create();
     }
 }
