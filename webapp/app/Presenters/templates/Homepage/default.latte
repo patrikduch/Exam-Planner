@@ -1,7 +1,10 @@
 {block content}
 
+{if $user->isInRole('guest')}
+	{control guestControl}
+{/if}
 
-{$content}
+
 
 
 <script>

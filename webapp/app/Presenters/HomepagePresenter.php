@@ -2,6 +2,9 @@
 
 namespace App\Presenters;
 
+use App\Components\App\Guest\GuestControl;
+use App\Components\App\Guest\GuestControlFactory;
+use App\Components\Shared\Skeleton\Header\HeaderControl;
 use App\Repositories\ProjectDetailRepository;
 use App\Services\Authenticator;
 use Nette;
@@ -13,35 +16,22 @@ use App\Presenters\BasePresenter;
  */
 final class HomepagePresenter extends BasePresenter
 {
-    private $clicked = false;
-    /**
-     * Handler of async signal event.
-     */
-    public function handleChangeClickState()
-    {
-        $this->clicked = !($this->clicked);
-
-        if ($this->isAjax()) {
-            $this->redrawControl('clicked_area'); // invalid snippet 'clicked_area'
-        }
-    }
+    /** @var GuestControlFactory $guestControlFactory @inject */
+    public $guestControlFactory;
 
     /**
      * Renders default view (default.latte).
      */
     public function renderDefault()
     {
+    }
 
-        if ($this->user->isInRole('pedagog')) {
-            $this->template->content = "Pegagogové";
-
-        } else if ($this->user->isInRole('student')) {
-            $this->template->content = "Studenti";
-        }
-
-        else {
-            $this->template->content = "Vítejte! Pro využivání tohoto univerzitního systému musíte být příhlášen.";
-        }
-
+    /**
+     * Create Guest component which is used to renders warning message to the guest users.
+     * @return GuestControl Instance of GuestControl.
+     */
+    protected function createComponentGuestControl(): GuestControl
+    {
+        return $this->guestControlFactory->create();
     }
 }
