@@ -4,6 +4,8 @@ namespace App\Presenters;
 
 use App\Components\App\Guest\GuestControl;
 use App\Components\App\Guest\GuestControlFactory;
+use App\Components\App\Lecturer\LecturerControl;
+use App\Components\App\Lecturer\LecturerControlFactory;
 use App\Components\Shared\Skeleton\Header\HeaderControl;
 use App\Repositories\ProjectDetailRepository;
 use App\Services\Authenticator;
@@ -19,6 +21,9 @@ final class HomepagePresenter extends BasePresenter
     /** @var GuestControlFactory $guestControlFactory @inject */
     public $guestControlFactory;
 
+    /** @var LecturerControlFactory $lecturerControlFactory @inject */
+    public $lecturerControlFactory;
+
     /**
      * Renders default view (default.latte).
      */
@@ -33,5 +38,10 @@ final class HomepagePresenter extends BasePresenter
     protected function createComponentGuestControl(): GuestControl
     {
         return $this->guestControlFactory->create();
+    }
+
+    protected function createComponentLecturerControl(): LecturerControl
+    {
+        return $this->lecturerControlFactory->create();
     }
 }

@@ -4,7 +4,9 @@
 	{control guestControl}
 {/if}
 
-
+{if $user->isInRole('pedagog')}
+	{control lecturerControl}
+{/if}
 
 
 <script>

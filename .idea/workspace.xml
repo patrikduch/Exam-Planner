@@ -20,20 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/webapp/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -98,6 +99,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605781847414</updated>
       <workItem from="1605781849069" duration="2572000" />
+      <workItem from="1605958912205" duration="215000" />
+      <workItem from="1605985011506" duration="2596000" />
     </task>
     <servers />
   </component>
@@ -125,10 +128,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1605830211755" />
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605845854035">
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605848171235">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1605845854035" />
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1605848171235" />
     <state x="693" y="341" key="DockerComposeFileDialog" timestamp="1605781902549">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

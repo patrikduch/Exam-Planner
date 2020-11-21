@@ -36,3 +36,5 @@ services:
 	    class: App\Components\Shared\Skeleton\Header\HeaderControlFactory
 	GuestControlFactory:
 	    class: App\Components\App\Guest\GuestControlFactory
+	LecturerControFactory:
+	    class:  App\Components\App\Lecturer\LecturerControlFactory
