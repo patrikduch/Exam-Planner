@@ -1,6 +1,15 @@
 INSERT INTO ProjectDetail (name) VALUES ('Exam planner');
 
 
+--- Degree
+INSERT INTO Degree (name) VALUES ('Bc');
+INSERT INTO Degree (name) VALUES ('Mgr');
+INSERT INTO Degree (name) VALUES ('PhD');
+INSERT INTO Degree (name) VALUES ('RNDr');
+INSERT INTO Degree (name) VALUES ('Doc');
+
+
+
 INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
 /*
     password: patrikduch
@@ -9,21 +18,27 @@ INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCW
 INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
 
 
-
-
-
-
-
-INSERT INTO user (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'pedagog');
+INSERT INTO User (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
 /*
     password: patrikduch
 */
 
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('wal45', 'Bogdan', 'Walek', 2);
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('wal45', 'VYDAP');
 
 
-INSERT INTO Student (kod_studenta, jmeno, prijmeni, user_id) VALUES ('duchfrajer', 'Patrik', 'Duch', 1);
+INSERT INTO User (username, PASSWORD, role) VALUES ('sustek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
 
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('sust22', 'Jan', 'Sustek', 3);
 
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 2, 3);
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 4, NULL);
 
 
 INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
@@ -66,3 +81,10 @@ INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','VYDAP')
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','SWINZ');
+
+
+
+
+
+
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('wal45', 4, 3);

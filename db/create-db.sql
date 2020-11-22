@@ -23,28 +23,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `mistnosti`
+-- Struktura tabulky `mistnosti` ExamRoom
 --
 
-CREATE TABLE `mistnosti` (
-  `zkratka_mistnosti` varchar(5) COLLATE utf8_czech_ci NOT NULL,
-  `popis` varchar(30) COLLATE utf8_czech_ci NOT NULL,
-  `kapacita` smallint(6) NOT NULL
+CREATE TABLE `ExamRoom` (
+  `room_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
+  `description` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `capacity` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `pedagogove`
+-- Struktura tabulky `pedagogove` Lecturer
 --
 
-CREATE TABLE `pedagogove` (
-  `kod_pedagoga` varchar(10) COLLATE utf8_czech_ci NOT NULL,
-  `jmeno` varchar(30) COLLATE utf8_czech_ci NOT NULL,
-  `prijmeni` varchar(30) COLLATE utf8_czech_ci NOT NULL,
-  `tituly_pred_jmenem` varchar(20) COLLATE utf8_czech_ci NOT NULL,
-  `tituly_za_jmenem` varchar(20) COLLATE utf8_czech_ci NOT NULL,
-  `heslo` varchar(20) COLLATE utf8_czech_ci NOT NULL
+CREATE TABLE `Lecturer` (
+  `lecturer_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `first_name` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `surname` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `user_id` INT COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 
@@ -54,15 +52,45 @@ CREATE TABLE `pedagogove` (
 -- Struktura tabulky `pedagogove_predmety`
 --
 
-CREATE TABLE `pedagogove_predmety` (
-  `kod_pedagoga` varchar(10) COLLATE utf8_czech_ci NOT NULL,
-  `zkratka_predmetu` varchar(5) COLLATE utf8_czech_ci NOT NULL
+CREATE TABLE `LecturerCourse` (
+  `lecturer_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `course_code` varchar(5) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
 
+
 --
--- Struktura tabulky `predmety` Course
+--
+--
+
+CREATE TABLE `LecturerDegree` (
+  `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY,
+  `name` varchar(50) COLLATE utf8_czech_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
+
+-- --------------------------------------------------------
+
+CREATE TABLE `Degree` (
+  `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(50) COLLATE utf8_czech_ci UNIQUE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
+
+
+CREATE TABLE `LecturerDegree` (
+  `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY AUTO_INCREMENT,
+  `lecturer_code` varchar(50) COLLATE utf8_czech_ci NOT NULL,
+  `pre_degree_id` INT COLLATE utf8_czech_ci NULL,
+  `post_degree_id` INT COLLATE utf8_czech_ci NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
+
+
+
+
+
+
+--
+-- Structure of relation `predmety Course`
 --
 
 CREATE TABLE `Course` (
@@ -128,22 +156,6 @@ ADD FOREIGN KEY (user_id) REFERENCES User(id);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --
 -- Struktura tabulky `studenti_predmety` StudentCourse
 --
@@ -166,7 +178,7 @@ ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
 
 
 --
--- Struktura tabulky `vypsane_terminy`
+-- Struktura tabulky `vypsane_terminy` ScheduledExam
 --
 
 CREATE TABLE `vypsane_terminy` (
@@ -186,10 +198,10 @@ CREATE TABLE `vypsane_terminy` (
 -- Struktura tabulky `vysledky`
 --
 
-CREATE TABLE `vysledky` (
-  `id_vysledku` smallint(6) NOT NULL,
-  `popis` varchar(20) COLLATE utf8_czech_ci NOT NULL,
-  `typ` varchar(2) COLLATE utf8_czech_ci NOT NULL
+CREATE TABLE `ExamResult` (
+  `id` smallint(6) NOT NULL,
+  `description` varchar(20) COLLATE utf8_czech_ci NOT NULL,
+  `type` varchar(2) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
@@ -208,17 +220,6 @@ CREATE TABLE `zapsane_terminy` (
 -- Klíče pro exportované tabulky
 --
 
---
--- Klíče pro tabulku `mistnosti`
---
-ALTER TABLE `mistnosti`
-  ADD PRIMARY KEY (`zkratka_mistnosti`);
-
---
--- Klíče pro tabulku `pedagogove`
---
-ALTER TABLE `pedagogove`
-  ADD PRIMARY KEY (`kod_pedagoga`);
 
 --
 -- Klíče pro tabulku `pedagogove_predmety`
@@ -233,18 +234,9 @@ ALTER TABLE `pedagogove_predmety`
 ALTER TABLE `predmety`
   ADD PRIMARY KEY (`zkratka_predmetu`);
 
---
--- Klíče pro tabulku `studenti`
---
-ALTER TABLE `studenti`
-  ADD PRIMARY KEY (`kod_studenta`);
 
---
--- Klíče pro tabulku `studenti_predmety`
---
-ALTER TABLE `studenti_predmety`
-  ADD PRIMARY KEY (`kod_studenta`,`zkratka_predmetu`),
-  ADD KEY `zkratka_predmetu` (`zkratka_predmetu`);
+
+
 
 --
 -- Klíče pro tabulku `vypsane_terminy`
@@ -256,11 +248,6 @@ ALTER TABLE `vypsane_terminy`
   ADD KEY `zkratka_predmetu` (`zkratka_predmetu`),
   ADD KEY `kod_pedagoga` (`kod_pedagoga`);
 
---
--- Klíče pro tabulku `vysledky`
---
-ALTER TABLE `vysledky`
-  ADD PRIMARY KEY (`id_vysledku`);
 
 --
 -- Klíče pro tabulku `zapsane_terminy`
@@ -289,12 +276,6 @@ ALTER TABLE `pedagogove_predmety`
   ADD CONSTRAINT `pedagogove_predmety_ibfk_1` FOREIGN KEY (`kod_pedagoga`) REFERENCES `pedagogove` (`kod_pedagoga`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pedagogove_predmety_ibfk_2` FOREIGN KEY (`zkratka_predmetu`) REFERENCES `predmety` (`zkratka_predmetu`) ON DELETE CASCADE ON UPDATE CASCADE;
 
---
--- Omezení pro tabulku `studenti_predmety`
---
-ALTER TABLE `studenti_predmety`
-  ADD CONSTRAINT `studenti_predmety_ibfk_1` FOREIGN KEY (`zkratka_predmetu`) REFERENCES `predmety` (`zkratka_predmetu`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `studenti_predmety_ibfk_2` FOREIGN KEY (`kod_studenta`) REFERENCES `studenti` (`kod_studenta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Omezení pro tabulku `vypsane_terminy`
@@ -318,4 +299,41 @@ ALTER TABLE `zapsane_terminy`
 
 /* Custom edit by Patrik Duch */
 
+ALTER TABLE `Lecturer`
+ADD PRIMARY KEY (`lecturer_code`);
 
+
+ALTER TABLE `Student`
+ADD PRIMARY KEY (`student_code`);
+
+
+ALTER TABLE `ExamRoom`
+ADD PRIMARY KEY (`room_code`);
+
+
+ALTER TABLE `ExamResult`
+ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `StudentCourse`
+ADD PRIMARY KEY (`student_code`,`course_code`),
+ADD KEY `course_code` (`course_code`);
+
+ALTER TABLE `StudentCourse`
+ADD CONSTRAINT `StudentCourse_ibfk_1`
+FOREIGN KEY (`course_code`) REFERENCES `Course` (`course_code`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `StudentCourse_ibfk_2`
+FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`)
+ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE `LecturerDegree`
+ADD CONSTRAINT `LecturerDegree_ibfk_1`
+FOREIGN KEY (`lecturer_code`) REFERENCES `Lecturer` (`lecturer_code`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `LecturerDegree_ibfk_2`
+FOREIGN KEY (`pre_degree_id`) REFERENCES `Degree` (`id`)
+ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `LecturerDegree`
+ADD CONSTRAINT `LecturerDegree_ibfk_3`
+FOREIGN KEY (`post_degree_id`) REFERENCES `Degree` (`id`)
+ON DELETE CASCADE ON UPDATE CASCADE;

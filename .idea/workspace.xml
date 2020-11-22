@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,7 @@
       <updated>1605781847414</updated>
       <workItem from="1605781849069" duration="2572000" />
       <workItem from="1605958912205" duration="215000" />
-      <workItem from="1605985011506" duration="27348000" />
+      <workItem from="1605985011506" duration="35782000" />
     </task>
     <servers />
   </component>
@@ -142,6 +143,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="635" y="228" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605781901158" />
+    <state x="671" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606061483677">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="671" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920@0.0.1707.920" timestamp="1606061483677" />
     <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606042224897">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
