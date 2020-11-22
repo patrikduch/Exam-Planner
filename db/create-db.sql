@@ -62,20 +62,26 @@ CREATE TABLE `pedagogove_predmety` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `predmety`
+-- Struktura tabulky `predmety` Course
 --
 
-CREATE TABLE `predmety` (
-  `zkratka_predmetu` varchar(5) COLLATE utf8_czech_ci NOT NULL,
-  `nazev` varchar(50) COLLATE utf8_czech_ci NOT NULL,
-  `pocet_kreditu` smallint(6) NOT NULL,
-  `pocet_hodin_prednasek` smallint(6) NOT NULL,
-  `pocet_hodin_cviceni` smallint(6) NOT NULL,
-  `ukonceni` varchar(2) COLLATE utf8_czech_ci NOT NULL,
-  `anotace` text COLLATE utf8_czech_ci NOT NULL
+CREATE TABLE `Course` (
+  `course_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
+  `title` varchar(50) COLLATE utf8_czech_ci NOT NULL,
+  `credits` smallint(6) NOT NULL,
+  `lecture_hours` smallint(6) NOT NULL,
+  `practice_hours` smallint(6) NOT NULL,
+  `classification` varchar(2) COLLATE utf8_czech_ci NOT NULL,
+  `annotation` text COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
+
+
+ALTER TABLE Course
+ADD PRIMARY KEY (course_code);
+
+
 
 --
 -- Structure of relation `Student`
@@ -90,6 +96,10 @@ CREATE TABLE `Student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
 
 -- --------------------------------------------------------
+
+
+ALTER TABLE Student
+ADD PRIMARY KEY (student_code);
 
 
 -- --------------------------------------------------------
@@ -135,15 +145,25 @@ ADD FOREIGN KEY (user_id) REFERENCES User(id);
 
 
 --
--- Struktura tabulky `studenti_predmety`
+-- Struktura tabulky `studenti_predmety` StudentCourse
 --
 
-CREATE TABLE `studenti_predmety` (
-  `kod_studenta` varchar(10) COLLATE utf8_czech_ci NOT NULL,
-  `zkratka_predmetu` varchar(5) COLLATE utf8_czech_ci NOT NULL
+CREATE TABLE `StudentCourse` (
+  `student_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `course_code` varchar(5) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
+
+ALTER TABLE StudentCourse
+ADD FOREIGN KEY (student_code) REFERENCES Student(student_code);
+
+ALTER TABLE StudentCourse
+ADD FOREIGN KEY (course_code) REFERENCES Course(course_code);
+
+
+
+
 
 --
 -- Struktura tabulky `vypsane_terminy`

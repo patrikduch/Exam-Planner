@@ -23,3 +23,46 @@ INSERT INTO user (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwC
 
 INSERT INTO Student (kod_studenta, jmeno, prijmeni, user_id) VALUES ('duchfrajer', 'Patrik', 'Duch', 1);
 
+
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('NUMX2', 'Numerická matematika', 6, 40, 40, 'ZK',
+'Cílem předmětu je rozšíření znalostí a dovedností studenta v oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,
+ problému vlastních čísel, aproximace funkcí, numerickou derivaci a numerický integrál.');
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('NUMX1', 'Úvod do numerické matematiky', 6, 40, 40, 'ZP',
+'Cílem předmětu je úvod do oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,
+ problému vlastních čísel, aproximace funkcí, numerickou derivaci a numerický integrál.');
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('VYDAP', 'Webové a databázové aplikace v PHP', 4, 20, 20, 'ZP',
+'Úvod předmětu je věnován seznámení s protokolem HTTP a formuláři v HTML. Dále už je předmět zaměřen na tvorbu webových aplikací v jazyce PHP s propojením na databázi MySQL. Student by měl být po absolvování
+ předmětu schopen samostatně vytvářet webové aplikace v PHP.');
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('SWINZ', 'Softwarové inženýrství', 6, 40, 40, 'ZK',
+'Cílem je seznámit studenty s problematikou informačních systémů, jejich architektur a aplikací (ERP, BI, CRM, ...). Dalším cílem je seznámení s životním cyklem vývoje a metodikami a standardy používanými v praxi (UP, RUP, ISO 12 207) ve spojení s modelovacím jazykem UML. V neposlední řadě budou studenti seznámeni se základy byznys modelování a jejich vazbou na podnikovou a IT strategii a také s metrikami softwarových systémů.');
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('XFUMO', 'Fuzzy modelování', 6, 40, 40, 'ZK',
+'Student se seznámí se základními principy hlavních metod fuzzy modelování, které mají řadu praktických aplikací. V rámci výuky bude demonstrováno řešení konkrétních problémů pomocí speciálního software pro fuzzy modelování vyvinutého na OU.');
+
+
+INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('XRPR1', 'Ročníkový projekt', 4, 20, 20, 'ZP',
+'Předmět ročníkový projekt je založen na spolupráci studentských týmů pod vedením pedagoga. Týmy jsou na začátku rozděleny dle osobních preferencí s přihlédnutím k osobnostním profilům jednotlivých členů (např. Belbinův test). Poté si týmy zvolí téma dlouhodobého softwarového projektu, který během semestru realizují. Součástí hodnoceného řešení jsou kromě vlastního softwarového produktu také artefakty, které studenti produkují během vývoje (diagram návrhu architektury, projektový plán, vize, iterační plány).
+Protože se jedná o softwarový projekt, předpokládáme uplatnění základních znalostí z předmětů z oblasti softwarového inženýrství, databází a programování. Pro sestavení metodiky vývoje je doporučen procesní framework OpenUP.
+Cílem předmětu je naučit studenta orientovat se ve vývoji a vlastním návrhu softwarové architektury. Tím ho připravit na týmovou práci v reálných projektech většího rozsahu.');
+
+
+
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','VYDAP');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','SWINZ');

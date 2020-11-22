@@ -20,20 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControlFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/www/static/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/www/static/css/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +96,7 @@
       <updated>1605781847414</updated>
       <workItem from="1605781849069" duration="2572000" />
       <workItem from="1605958912205" duration="215000" />
-      <workItem from="1605985011506" duration="17641000" />
+      <workItem from="1605985011506" duration="20589000" />
     </task>
     <servers />
   </component>
