@@ -26,6 +26,9 @@ services:
 		class: App\Repositories\ProjectDetailRepository
 	userRepository:
 	    class: App\Infrastructure\Repositories\UserRepository
+	studentRepository:
+	    class: App\Repositories\StudentRepository
+
 	passwordEncrypterService:
 	    class: App\Services\PasswordEncrypter
 
@@ -38,3 +41,5 @@ services:
 	    class: App\Components\App\Guest\GuestControlFactory
 	LecturerControFactory:
 	    class:  App\Components\App\Lecturer\LecturerControlFactory
+	StudentControlFactory:
+	    class: App\Components\App\Student\StudentControlFactory

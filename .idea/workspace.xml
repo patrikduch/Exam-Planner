@@ -20,14 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/www/static/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/www/static/css/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docker-compose.yml" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -100,7 +107,7 @@
       <updated>1605781847414</updated>
       <workItem from="1605781849069" duration="2572000" />
       <workItem from="1605958912205" duration="215000" />
-      <workItem from="1605985011506" duration="2596000" />
+      <workItem from="1605985011506" duration="17641000" />
     </task>
     <servers />
   </component>
@@ -128,10 +135,14 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1605830211755" />
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605848171235">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606005149599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1605848171235" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606005149599" />
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606006041102">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1606006041102" />
     <state x="693" y="341" key="DockerComposeFileDialog" timestamp="1605781902549">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -140,5 +151,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="635" y="228" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605781901158" />
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606042224897">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606042224897" />
   </component>
 </project>

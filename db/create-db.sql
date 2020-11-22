@@ -1,21 +1,3 @@
-CREATE TABLE ProjectDetail (
-	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(45) NOT NULL
-);
-
-CREATE TABLE user (
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  username VARCHAR(100) NOT NULL,
-  password VARCHAR(250) NOT NULL,
-  role VARCHAR(150) NOT NULL
-);
-
-
-
-
-
-
-
 -- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
@@ -96,17 +78,61 @@ CREATE TABLE `predmety` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `studenti`
+-- Structure of relation `Student`
 --
 
-CREATE TABLE `studenti` (
-  `kod_studenta` varchar(10) COLLATE utf8_czech_ci NOT NULL,
-  `jmeno` varchar(30) COLLATE utf8_czech_ci NOT NULL,
-  `prijmeni` varchar(30) COLLATE utf8_czech_ci NOT NULL,
-  `heslo` varchar(20) COLLATE utf8_czech_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
+CREATE TABLE `Student` (
+  `student_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `first_name` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `surname` varchar(30) COLLATE utf8_czech_ci NOT NULL,
+  `user_id` INT COLLATE utf8_czech_ci NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
 
 -- --------------------------------------------------------
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure of relation `User`
+--
+
+CREATE TABLE `User` (
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `username` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(250) NOT NULL,
+  `role` VARCHAR(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
+
+
+-- --------------------------------------------------------
+
+
+--
+-- Relationship bettween `User` and `Student` entity.
+--
+
+ALTER TABLE Student
+ADD FOREIGN KEY (user_id) REFERENCES User(id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --
 -- Struktura tabulky `studenti_predmety`
@@ -268,4 +294,8 @@ ALTER TABLE `zapsane_terminy`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+/* Custom edit by Patrik Duch */
+
 

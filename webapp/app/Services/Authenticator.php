@@ -34,7 +34,7 @@ final class Authenticator implements Nette\Security\IAuthenticator
     {
         [$username, $password] = $credentials;
 
-        $row = $this->database->table('user')
+        $row = $this->database->table('User')
             ->where('username', $username)
             ->fetch();
 
