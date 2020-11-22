@@ -1,11 +1,32 @@
 <h2 class="text-center">Zápis na termíny (zkouškové i zápočtové)</h2>
 
 <div class="mt-4">
-    <p>Student: {$studentDetails->first_name} {$studentDetails->surname}</p>
-    <p>Osobní číslo: {$studentDetails->student_code}</p>
+
 </div>
+
 
 <hr/>
 
 <h3 class="mt-4">Platné aktuálně vypsané termíny předmětů:</h3>
 
+
+<table id="my-table" class="table">
+    <thead>
+    <tr>
+        <th scope="col">Název předmětu</th>
+        <th scope="col">Ukončení</th>
+        <th scope="col">Počet kreditů</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr n:foreach="$studentDetails as $item">
+        <td>{$item->course_title}</td>
+        <td>{$item->classification}</td>
+        <td>{$item->credits}
+            <button class="ml-5">Zapsat</button>
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
