@@ -28,6 +28,8 @@ services:
 	    class: App\Infrastructure\Repositories\UserRepository
 	studentRepository:
 	    class: App\Repositories\StudentRepository
+	lecturerRepository:
+	    class: App\Infrastructure\Repositories\LecturerRepository
 
 	passwordEncrypterService:
 	    class: App\Services\PasswordEncrypter

@@ -1,3 +1,32 @@
-<h2 class="text-center">Správa neskutečněných termínů</h2>
+<h2 class="text-center">Správa zkouškových termínů</h2>
+
+<div>
+    <p>Pedagog:
+
+        <span n:foreach="$lecturerPreDegrees as $lecturerPreDegree">
+            {$lecturerPreDegree->name}.
+        </span>
+
+        {$lecturerDetails->first_name} {$lecturerDetails->surname}
+
+        <span n:foreach="$lecturerPostDegrees as $lecturerPostDegree">
+            {$lecturerPostDegree->name}.
+        </span>
+
+    </p>
+
+    <button class="btn btn-primary">Přidat novou zkoušku / zápočet</button>
+</div>
+
+<div class="mt-5 row">
+
+    <div class="col-sm-6">
+        <h3>Uskutečněné zkoušky / započty</h3>
+    </div>
+
+    <div class="col-sm-6">
+        <h3>Avizované termíny zkoušek</h3>
+    </div>
 
 
+</div>

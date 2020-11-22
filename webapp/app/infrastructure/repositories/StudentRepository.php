@@ -35,7 +35,7 @@ class StudentRepository implements  IStudentRepository {
            JOIN Student S ON SC.student_code = S.student_code
            JOIN Course C ON SC.course_code = C.course_code
             WHERE S.user_id = (
-	            SELECT id  FROM User WHERE id = 1);
+	            SELECT id  FROM User WHERE id = ?);
 	       ', $userId
        );
 

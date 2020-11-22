@@ -337,3 +337,13 @@ ALTER TABLE `LecturerDegree`
 ADD CONSTRAINT `LecturerDegree_ibfk_3`
 FOREIGN KEY (`post_degree_id`) REFERENCES `Degree` (`id`)
 ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE `LecturerCourse`
+ADD CONSTRAINT `LecturerCourse_ibfk_1`
+FOREIGN KEY (`lecturer_code`) REFERENCES `Lecturer` (`lecturer_code`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `LecturerCourse_ibfk_2`
+FOREIGN KEY (`course_code`) REFERENCES `Course` (`course_code`)
+ON DELETE CASCADE ON UPDATE CASCADE;
+
+

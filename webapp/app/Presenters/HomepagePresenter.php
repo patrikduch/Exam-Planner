@@ -51,7 +51,7 @@ final class HomepagePresenter extends BasePresenter
      */
     protected function createComponentLecturerControl(): LecturerControl
     {
-        return $this->lecturerControlFactory->create();
+        return $this->lecturerControlFactory->create($this->user);
     }
 
     protected function createComponentStudentControl(): StudentControl
