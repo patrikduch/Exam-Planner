@@ -48,7 +48,7 @@ final class LecturerControl extends Control {
             $lecturerDetails->lecturer_code
         );
 
-
+        $this->template->courses = $this->lectureRepository->getLecturerCourses($lecturerDetails->lecturer_code);
 
         $this->template->render(__DIR__ . '/LecturerControl.latte');
     }

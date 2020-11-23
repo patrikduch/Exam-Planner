@@ -41,6 +41,11 @@ INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES 
 INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 4, NULL);
 
 
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX1');
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX2');
+
+
+
 INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
 ('NUMX2', 'Numerická matematika', 6, 40, 40, 'ZK',
 'Cílem předmětu je rozšíření znalostí a dovedností studenta v oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,

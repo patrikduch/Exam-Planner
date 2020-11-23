@@ -15,8 +15,42 @@
 
     </p>
 
-    <button class="btn btn-primary">Přidat novou zkoušku / zápočet</button>
 </div>
+
+
+<div class="mt-5 row">
+
+    <div class="col-sm-12">
+        <h3>Vyučované předměty</h3>
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Zkratka předmětu</th>
+                <th scope="col">Název</th>
+                <th scope="col">Kredity</th>
+                <th scope="col">Ukončení</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr n:foreach="$courses as $course">
+                <th scope="row">{$course->course_code}</th>
+                <td>{$course->title}</td>
+                <td>{$course->credits}</td>
+                <td>{$course->classification}</td>
+                <td><button class="btn btn-info">Vytvořit termín</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</div>
+
+
 
 <div class="mt-5 row">
 
