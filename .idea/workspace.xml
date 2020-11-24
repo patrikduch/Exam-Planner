@@ -21,9 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/shared/skeleton/header/HeaderControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/shared/skeleton/header/HeaderControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/SignupPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/UserAuthPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/UserAuthPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/ProfileEdit/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/ProfileEdit/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Signup/default.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/UserAuth/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/UserAuth/default.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +102,7 @@
       <workItem from="1605781849069" duration="2572000" />
       <workItem from="1605958912205" duration="215000" />
       <workItem from="1605985011506" duration="47517000" />
+      <workItem from="1606238820642" duration="1030000" />
     </task>
     <servers />
   </component>

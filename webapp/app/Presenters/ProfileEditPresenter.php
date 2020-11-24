@@ -3,8 +3,6 @@
 namespace App\Presenters;
 
 use App\Infrastructure\Repositories\UserRepository;
-use App\Presenters\BasePresenter;
-use App\Repositories\ProjectDetailRepository;
 use App\Services\PasswordEncrypter;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
@@ -30,7 +28,6 @@ final class ProfileEditPresenter extends BasePresenter {
 
     }
 
-
     /**
      * @return BootstrapForm
      */
@@ -40,18 +37,18 @@ final class ProfileEditPresenter extends BasePresenter {
         $form->renderMode = RenderMode::VERTICAL_MODE;
         $row = $form->addRow();
         $row->addCell(6)
-            ->addPassword('password', 'New password')
-            ->setRequired('Please enter your new password');
+            ->addPassword('password', 'Nové heslo')
+            ->setRequired('Prosím zadejte nové heslo.');
 
 
         $secondRow= $form->addRow();
         $secondRow->addCell(6)
-            ->addPassword('passwordVerification', 'Password verification')
-            ->setRequired('Please enter your verification password')
-            ->addRule($form::EQUAL, 'Entered password are not correct.', $form['password']);
+            ->addPassword('passwordVerification', 'Ověření hesla')
+            ->setRequired('Prosím zadejte ověření vašeho hesla.')
+            ->addRule($form::EQUAL, 'Zadané hesla se neshodují.', $form['password']);
 
 
-        $form->addSubmit('send', 'Change password');
+        $form->addSubmit('send', 'Změnit heslo');
         $form->onSuccess[] = [$this, 'formSucceeded'];
         return $form;
     }
@@ -72,7 +69,7 @@ final class ProfileEditPresenter extends BasePresenter {
 
         $this->user->logout();
 
-        $this->flashMessage('Password has been successfully changed.');
+        $this->flashMessage('Vaše heslo bylo úspěšně změněno.');
         $this->redirect('Homepage:');
     }
 }
