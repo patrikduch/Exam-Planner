@@ -59,34 +59,26 @@ CREATE TABLE `LecturerCourse` (
 
 -- --------------------------------------------------------
 
-
---
---
---
-
-CREATE TABLE `LecturerDegree` (
-  `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY,
-  `name` varchar(50) COLLATE utf8_czech_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
-
 -- --------------------------------------------------------
+
+--
+-- Structure of relation `Degree`
+--
 
 CREATE TABLE `Degree` (
   `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8_czech_ci UNIQUE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
 
-
+--
+-- Structure of relation `LecturerDegree`
+--
 CREATE TABLE `LecturerDegree` (
   `id` INT NOT NULL COLLATE utf8_czech_ci PRIMARY KEY AUTO_INCREMENT,
   `lecturer_code` varchar(50) COLLATE utf8_czech_ci NOT NULL,
   `pre_degree_id` INT COLLATE utf8_czech_ci NULL,
   `post_degree_id` INT COLLATE utf8_czech_ci NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
-
-
-
-
 
 
 --
@@ -122,13 +114,6 @@ CREATE TABLE `Student` (
   `user_id` INT COLLATE utf8_czech_ci NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=UTF8_CZECH_CI;
-
--- --------------------------------------------------------
-
-
-ALTER TABLE Student
-ADD PRIMARY KEY (student_code);
-
 
 -- --------------------------------------------------------
 

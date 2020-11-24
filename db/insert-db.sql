@@ -27,7 +27,7 @@ INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
 VALUES ('wal45', 'Bogdan', 'Walek', 2);
 
 INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('wal45', 'VYDAP');
-
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('wal45', 4, 3);
 
 INSERT INTO User (username, PASSWORD, role) VALUES ('sustek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
 /*
@@ -37,8 +37,10 @@ INSERT INTO User (username, PASSWORD, role) VALUES ('sustek', '$2y$12$SVW1hnbemw
 INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
 VALUES ('sust22', 'Jan', 'Sustek', 3);
 
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 2, 3);
+
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 5, 3);
 INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 4, NULL);
+
 
 
 INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX1');
