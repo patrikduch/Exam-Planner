@@ -89,9 +89,14 @@ INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO')
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','SWINZ');
 
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c116', 'Budova C', 15);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c112', 'Budova C', 10);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c111', 'Budova C', 12);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a330', 'Budova A', 20);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a210', 'Budova A', 15);
 
 
+INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_date, max_participants, note)
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-25:13:00',18, 'Zápočet předmětu VYDAP');
 
 
-
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('wal45', 4, 3);

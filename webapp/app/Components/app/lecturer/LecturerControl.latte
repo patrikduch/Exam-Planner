@@ -53,13 +53,36 @@
 
 
 <div class="mt-5 row">
+    <div class="col-sm-8">
+        <h3>Avizované termíny zkoušek</h3>
 
-    <div class="col-sm-6">
-        <h3>Uskutečněné zkoušky / započty</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Zkratka předmětu</th>
+                <th scope="col">Učebna</th>
+                <th scope="col">Poznámka</th>
+                <th scope="col">Termín</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr n:foreach="$lecturerExams as $lecturerExam">
+                <th scope="row">{$course->course_code}</th>
+                <td>{$lecturerExam->room_code}</td>
+                <td>{$lecturerExam->note}</td>
+                <td>{$lecturerExam->exam_date}</td>
+                <td><button class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                <td><button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+            </tr>
+            </tbody>
+        </table>
+
+
     </div>
 
-    <div class="col-sm-6">
-        <h3>Avizované termíny zkoušek</h3>
+    <div class="col-sm-4">
+        <h3>Uskutečněné zkoušky / započty</h3>
+
     </div>
 
 

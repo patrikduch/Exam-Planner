@@ -44,15 +44,15 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturerCourses(string $lecturerCode)
     {
-
         $resultSet = $this->database->query('SELECT LC.course_code, title, credits, lecture_hours, practice_hours, classification, annotation
                     FROM LecturerCourse LC 
                     JOIN Course C ON LC.course_code = C.course_code
                     WHERE lecturer_code  = ?', $lecturerCode);
 
         return $resultSet;
-
     }
+
+
 
     /**
      * Fetch all pre degrees for the selected lecturer.
@@ -83,5 +83,20 @@ class LecturerRepository implements ILecturerRepository {
                 WHERE LD.lecturer_code=?", $lecturerCode);
 
         return $postDegreesSet;
+    }
+
+    /**
+     * Fetch all active exams for the selected lecturer.
+     * @param string $lecturerCode
+     */
+    public function getActiveExams(string $lecturerCode)
+    {
+        $activeExams = $this->database->query('SELECT E.room_code, E.lecturer_code, E.course_code, E.exam_date, E.max_participants,
+        E.note, C.title AS course_title
+        FROM ExamDate E 
+        JOIN Course C ON C.course_code = E.course_code
+        WHERE E.lecturer_code = ?;', $lecturerCode);
+
+        return $activeExams;
     }
 }
