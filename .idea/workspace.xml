@@ -25,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
     </list>
@@ -102,7 +101,7 @@
       <workItem from="1605781849069" duration="2572000" />
       <workItem from="1605958912205" duration="215000" />
       <workItem from="1605985011506" duration="47517000" />
-      <workItem from="1606238820642" duration="10990000" />
+      <workItem from="1606238820642" duration="20213000" />
     </task>
     <servers />
   </component>
@@ -130,10 +129,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1605830211755" />
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606253567858">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606290476700">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606253567858" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606290476700" />
     <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606006041102">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

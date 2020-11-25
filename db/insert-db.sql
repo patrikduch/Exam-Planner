@@ -100,3 +100,7 @@ INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_date, max_part
  VALUES ('c116', 'wal45', 'VYDAP', '2020-11-25:13:00',18, 'Zápočet předmětu VYDAP');
 
 
+
+INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', 1);
+INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
+

@@ -52,6 +52,10 @@ final class LecturerControl extends Control {
             $lecturerDetails->lecturer_code
         );
 
+        $this->template->lecturerScheduledExams = $this->lectureRepository->getScheduledExams(
+            $lecturerDetails->lecturer_code
+        );
+
 
         $this->template->courses = $this->lectureRepository->getLecturerCourses($lecturerDetails->lecturer_code);
 

@@ -138,7 +138,7 @@ CREATE TABLE `StudentCourse` (
 --
 
 CREATE TABLE `ExamDate` (
-  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `exam_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `room_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
   `lecturer_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
   `course_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
@@ -146,7 +146,6 @@ CREATE TABLE `ExamDate` (
   `max_participants` smallint(6) NOT NULL,
   `note` varchar(200) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
-
 
 
 --
@@ -179,17 +178,14 @@ CREATE TABLE `ExamResult` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `zapsane_terminy`
+-- Structure of relation `ActiveExam zapsane_terminy`
 --
 
-CREATE TABLE `zapsane_terminy` (
-  `id_terminu` int(11) NOT NULL,
-  `kod_studenta` varchar(10) COLLATE utf8_czech_ci NOT NULL,
-  `id_vysledku` smallint(6)
+CREATE TABLE `ScheduledExam` (
+  `exam_id` int(11) NOT NULL PRIMARY KEY,
+  `student_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `result_id` smallint(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
-
-
-
 
 
 
@@ -267,3 +263,22 @@ FOREIGN KEY (`lecturer_code`) REFERENCES `Lecturer` (`lecturer_code`) ON DELETE 
 ALTER TABLE `ExamDate`
 ADD CONSTRAINT `ExamDateToCourse_ibfk_1`
 FOREIGN KEY (`course_code`) REFERENCES `Course` (`course_code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE `ActiveExam`
+ADD CONSTRAINT `ActiveExamToStudent_ibfk_1`
+FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `ActiveExam`
+ADD CONSTRAINT `ActiveExamToExamDate_ibfk_1`
+FOREIGN KEY (`id`) REFERENCES `ExamDate` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE `ScheduledExam`
+ADD CONSTRAINT `ScheduledExamToExamDate_ibfk_1`
+FOREIGN KEY (`exam_id`) REFERENCES `ExamDate` (`exam_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+ALTER TABLE `ScheduledExam`
+ADD CONSTRAINT `ScheduledExamToStudent_ibfk_1`
+FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`) ON DELETE CASCADE ON UPDATE CASCADE;

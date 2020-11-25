@@ -99,4 +99,19 @@ class LecturerRepository implements ILecturerRepository {
 
         return $activeExams;
     }
+
+    /**
+     * Fetch scheduled (ended) exams for the selected lecturer.
+     * @param string $lecturerCode
+     */
+    public function getScheduledExams(string $lecturerCode)
+    {
+        $scheduledExams = $this->database->query('
+        SELECT ED.course_code, ED.room_code, ED.note, ED.exam_date 
+        FROM ScheduledExam SE
+        JOIN ExamDate ED ON ED.exam_id = SE.exam_id
+        AND ED.lecturer_code = ? AND ED.exam_id NOT IN (SELECT id FROM ExamResult);', $lecturerCode);
+
+        return $scheduledExams;
+    }
 }
