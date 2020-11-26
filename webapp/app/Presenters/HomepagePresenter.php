@@ -8,11 +8,6 @@ use App\Components\App\Lecturer\LecturerControl;
 use App\Components\App\Lecturer\LecturerControlFactory;
 use App\Components\App\Student\StudentControl;
 use App\Components\App\Student\StudentControlFactory;
-use App\Components\Shared\Skeleton\Header\HeaderControl;
-use App\Repositories\ProjectDetailRepository;
-use App\Services\Authenticator;
-use Nette;
-use App\Presenters\BasePresenter;
 
 /**
  * Class HomepagePresenter
@@ -20,6 +15,7 @@ use App\Presenters\BasePresenter;
  */
 final class HomepagePresenter extends BasePresenter
 {
+
     /** @var GuestControlFactory $guestControlFactory @inject */
     public $guestControlFactory;
 

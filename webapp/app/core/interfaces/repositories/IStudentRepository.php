@@ -8,5 +8,6 @@ namespace App\Core\Interfaces\Repositories;
  */
 interface IStudentRepository {
     public function getStudentDetails(int $userId);
+    public function submitToExam(int $userId);
 }
 

@@ -28,18 +28,19 @@ class StudentRepository implements  IStudentRepository {
      */
     public function getStudentDetails(int $userId)
     {
-       $resultSet = $this->database->query(
-           'SELECT SC.student_code, S.first_name, S.surname, C.title AS course_title,
-           C.credits, C.lecture_hours, C.practice_hours, C.classification, C.annotation
-           FROM StudentCourse SC 
-           JOIN Student S ON SC.student_code = S.student_code
-           JOIN Course C ON SC.course_code = C.course_code
-            WHERE S.user_id = (
-	            SELECT id  FROM User WHERE id = ?);
-	       ', $userId
-       );
+       $resultSet = $this->database->table('Student')
+           ->fetch('SELECT * FROM Student WHERE userId = ?', $userId);
 
        return $resultSet;
+    }
+
+    /**
+     * Submit to currently active exams.
+     * @param int $userId User identifier of targeted student.
+     */
+    public function submitToExam(int $userId)
+    {
+        // TODO: Implement submitToExam() method.
     }
 }
 

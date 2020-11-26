@@ -1,32 +1,65 @@
+
+
+<!-- A vertical navbar -->
+<nav class="navbar bg-light">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <span><strong>Role: student</strong></span>
+        </li>
+        <li class="nav-item mt-1">
+            <span>Osobni id: {$studentDetail->student_code}</span>
+        </li>
+        <li class="nav-item">
+             <span>Jméno: {$studentDetail->first_name}</span>
+        </li>
+        <li class="nav-item">
+            <span>Přijmení: {$studentDetail->surname}</span>
+        </li>
+    </ul>
+
+</nav>
+
+
 <h2 class="text-center">Zápis na termíny (zkouškové i zápočtové)</h2>
-
-<div class="mt-4">
-
-</div>
-
 
 <hr/>
 
-<h3 class="mt-4">Platné aktuálně vypsané termíny předmětů:</h3>
+<div class="row">
+    <div class="col-sm-12">
+        <h3 class="mt-4">Platné aktuálně vypsané termíny předmětů:</h3>
+        <table id="my-table" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Název předmětu</th>
+                    <th scope="col">Ukončení</th>
+                    <th scope="col">Počet kreditů</th>
+                </tr>
+            </thead>
+            <tbody>
 
+           
 
-<table id="my-table" class="table">
-    <thead>
-    <tr>
-        <th scope="col">Název předmětu</th>
-        <th scope="col">Ukončení</th>
-        <th scope="col">Počet kreditů</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr n:foreach="$studentDetails as $item">
-        <td>{$item->course_title}</td>
-        <td>{$item->classification}</td>
-        <td>{$item->credits}
-            <button class="ml-5">Zapsat</button>
-        </td>
+            </tbody>
+        </table>
+    </div>
 
-    </tr>
+    <div class="col-sm-12">
+        <h3 class="mt-4">Aktivní termíny zkoušek</h3>
+        <table id="my-table" class="table">
+            <thead>
+            <tr>
+                <th scope="col">Název předmětu</th>
+                <th scope="col">Ukončení</th>
+                <th scope="col">Počet kreditů</th>
+            </tr>
+            </thead>
+            <tbody>
 
-    </tbody>
-</table>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

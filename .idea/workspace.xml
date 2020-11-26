@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_exams.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_active_exams.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_finished_exams.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +103,7 @@
       <workItem from="1605985011506" duration="47517000" />
       <workItem from="1606238820642" duration="23053000" />
       <workItem from="1606307307230" duration="12391000" />
-      <workItem from="1606382320986" duration="4118000" />
+      <workItem from="1606382320986" duration="7663000" />
     </task>
     <servers />
   </component>
