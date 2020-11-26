@@ -63,7 +63,9 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturerPostDegrees(string $lecturerCode)
     {
-        $postDegreesSet = $this->database->fetchAll('CALL pr_get_lecturer_post_degrees(?)', $lecturerCode);
+        $postDegreesSet = $this->database->fetchAll(
+            'CALL pr_get_lecturer_post_degrees(?)', $lecturerCode
+        );
         return $postDegreesSet;
     }
 
@@ -73,7 +75,9 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getActiveExams(string $lecturerCode)
     {
-        $activeExams = $this->database->fetchAll('CALL pr_get_active_exams(?)', $lecturerCode);
+        $activeExams = $this->database->fetchAll(
+            'CALL pr_get_lecturer_exams(?,?)', $lecturerCode, true
+        );
         return $activeExams;
     }
 
@@ -83,7 +87,9 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getScheduledExams(string $lecturerCode)
     {
-        $scheduledExams = $this->database->fetchAll('CALL pr_get_finished_exams(?)', $lecturerCode);
+        $scheduledExams = $this->database->fetchAll(
+            'CALL pr_get_lecturer_exams(?,?)', $lecturerCode, false
+        );
         return $scheduledExams;
     }
 }

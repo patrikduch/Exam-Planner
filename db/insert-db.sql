@@ -104,6 +104,6 @@ INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_date, max_part
 
 
 
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', 1);
+INSERT INTO FinishedExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', 1);
 INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
 
