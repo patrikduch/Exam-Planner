@@ -282,3 +282,22 @@ FOREIGN KEY (`exam_id`) REFERENCES `ExamDate` (`exam_id`) ON DELETE CASCADE ON U
 ALTER TABLE `ScheduledExam`
 ADD CONSTRAINT `ScheduledExamToStudent_ibfk_1`
 FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fix for charset of the database */
+ALTER DATABASE `db` CHARACTER SET utf8 COLLATE utf8_general_ci;

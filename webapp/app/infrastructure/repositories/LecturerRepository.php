@@ -31,10 +31,7 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturer(int $id)
     {
-        $resultSet = $this->database->fetch(
-            'SELECT lecturer_code, first_name, surname FROM Lecturer WHERE user_id = ?', $id
-        );
-
+        $resultSet = $this->database->fetch('CALL get_lecturer(?)', $id);
         return $resultSet;
     }
 
@@ -44,15 +41,9 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturerCourses(string $lecturerCode)
     {
-        $resultSet = $this->database->query('SELECT LC.course_code, title, credits, lecture_hours, practice_hours, classification, annotation
-                    FROM LecturerCourse LC 
-                    JOIN Course C ON LC.course_code = C.course_code
-                    WHERE lecturer_code  = ?', $lecturerCode);
-
+        $resultSet = $this->database->fetchAll('CALL get_lecturer_courses(?)', $lecturerCode);
         return $resultSet;
     }
-
-
 
     /**
      * Fetch all pre degrees for the selected lecturer.
@@ -61,12 +52,7 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturerPreDegrees(string $lecturerCode)
     {
-        $preDegreesSet = $this->database->query(
-            "SELECT name FROM Degree D 
-                JOIN  LecturerDegree LD  ON LD.pre_degree_id = D.id
-                WHERE LD.lecturer_code=?", $lecturerCode);
-
-
+        $preDegreesSet = $this->database->fetchAll("CALL pr_get_lecturer_pre_degrees(?)", $lecturerCode);
         return $preDegreesSet;
     }
 
@@ -77,11 +63,7 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturerPostDegrees(string $lecturerCode)
     {
-        $postDegreesSet = $this->database->query(
-            "SELECT name FROM Degree D 
-                JOIN  LecturerDegree LD  ON LD.post_degree_id = D.id
-                WHERE LD.lecturer_code=?", $lecturerCode);
-
+        $postDegreesSet = $this->database->fetchAll('CALL pr_get_lecturer_post_degrees(?)', $lecturerCode);
         return $postDegreesSet;
     }
 
@@ -91,12 +73,7 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getActiveExams(string $lecturerCode)
     {
-        $activeExams = $this->database->query('SELECT E.room_code, E.lecturer_code, E.course_code, E.exam_date, E.max_participants,
-        E.note, C.title AS course_title
-        FROM ExamDate E 
-        JOIN Course C ON C.course_code = E.course_code
-        WHERE E.lecturer_code = ?;', $lecturerCode);
-
+        $activeExams = $this->database->fetchAll('CALL pr_get_active_exams(?)', $lecturerCode);
         return $activeExams;
     }
 
@@ -106,12 +83,7 @@ class LecturerRepository implements ILecturerRepository {
      */
     public function getScheduledExams(string $lecturerCode)
     {
-        $scheduledExams = $this->database->query('
-        SELECT ED.course_code, ED.room_code, ED.note, ED.exam_date 
-        FROM ScheduledExam SE
-        JOIN ExamDate ED ON ED.exam_id = SE.exam_id
-        AND ED.lecturer_code = ? AND ED.exam_id NOT IN (SELECT id FROM ExamResult);', $lecturerCode);
-
+        $scheduledExams = $this->database->fetchAll('CALL pr_get_finished_exams(?)', $lecturerCode);
         return $scheduledExams;
     }
 }
