@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,7 @@
       <workItem from="1605985011506" duration="47517000" />
       <workItem from="1606238820642" duration="23053000" />
       <workItem from="1606307307230" duration="12391000" />
-      <workItem from="1606382320986" duration="8131000" />
+      <workItem from="1606382320986" duration="8514000" />
     </task>
     <servers />
   </component>
