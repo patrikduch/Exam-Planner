@@ -1,27 +1,19 @@
 DELIMITER $$
 CREATE PROCEDURE pr_get_student_list_exams (IN p_studentCode VARCHAR(25))
 BEGIN
-
-		
-	SELECT EX.exam_id, SC.student_code, C.title AS course_title, C.credits AS course_credits, EX.course_code, EX.exam_date, EX.room_code,
-	CASE
-    WHEN exam_id = (SELECT ED.exam_id FROM ExamDate ED WHERE ED.exam_id NOT IN (
-	 	SELECT exam_id FROM ScheduledExam
-	 )) 
-	 
-	 THEN 0
-	 ELSE 1
-	
-    
-	END AS is_exam_active
+	SELECT exam_id, 0 AS is_exam_active, C.course_code, C.credits AS course_credits, C.title AS course_title, EX.exam_date
 	FROM ExamDate EX
-	JOIN Course C 
-		ON C.course_code = EX.course_code
-	
-	JOIN StudentCourse SC
-		ON SC.course_code = C.course_code
-	
-	WHERE SC.student_code = p_studentCode AND EX.exam_date > CURDATE();
+	JOIN Course C
+		ON C.course_code =  EX.course_code
+	WHERE EX.exam_id NOT IN (SELECT exam_id FROM ScheduledExam) AND EX.exam_date > CURDATE()
 
-	
+	UNION
+
+	SELECT exam_id, 1 AS is_exam_active, C.course_code, C.credits AS course_credits, C.title AS course_title, EX.exam_date
+	FROM ExamDate EX
+	JOIN Course C
+		ON C.course_code =  EX.course_code
+	WHERE EX.exam_id IN (SELECT exam_id FROM ScheduledExam) AND EX.exam_date > CURDATE();
+
 END$$
+
