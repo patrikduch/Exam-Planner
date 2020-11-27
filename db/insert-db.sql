@@ -95,22 +95,31 @@ INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c111', 'Budova 
 INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a330', 'Budova A', 20);
 INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a210', 'Budova A', 15);
 
+ INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');
 
 INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-25:13:00','2020-11-25:13:50',18, 'Zápočet předmětu VYDAP');
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:19:00','2020-11-27:19:50',18, 'Zápočet předmětu VYDAP');
 
- INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:13:00','2020-11-27:13:50',18, 'Zápočet předmětu VYDAP');
-
- INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-29:12:00','2020-11-29:13:50',18, 'Zápočet předmětu VYDAP');
+ INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (2, 'duc0016', NULL);
 
 
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
-INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
+
+INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:20:00','2020-11-27:20:50',18, 'Zápočet předmětu VYDAP');
 
 INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
 INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
 
+INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
+INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
 
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (2, 'duc0016', NULL);
+ INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');+
+
+ INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
+ VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:12:00','2020-11-27:13:50',18, 'Zápočet předmětu VYDAP');
+
+
+INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);
+INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);

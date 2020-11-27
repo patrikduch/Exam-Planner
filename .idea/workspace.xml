@@ -25,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <workItem from="1606382320986" duration="13022000" />
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
-      <workItem from="1606483022412" duration="2628000" />
+      <workItem from="1606483022412" duration="9832000" />
     </task>
     <servers />
   </component>
@@ -153,9 +152,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="671" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920@0.0.1707.920" timestamp="1606061483677" />
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606248263934">
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606500815245">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606248263934" />
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606500815245" />
   </component>
 </project>

@@ -266,15 +266,6 @@ ADD CONSTRAINT `ExamDateToCourse_ibfk_1`
 FOREIGN KEY (`course_code`) REFERENCES `Course` (`course_code`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
-ALTER TABLE `ActiveExam`
-ADD CONSTRAINT `ActiveExamToStudent_ibfk_1`
-FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE `ActiveExam`
-ADD CONSTRAINT `ActiveExamToExamDate_ibfk_1`
-FOREIGN KEY (`id`) REFERENCES `ExamDate` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-
 ALTER TABLE `ScheduledExam`
 ADD CONSTRAINT `ScheduledExamToExamDate_ibfk_1`
 FOREIGN KEY (`exam_id`) REFERENCES `ExamDate` (`exam_id`);
@@ -288,3 +279,5 @@ FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`);
 /* Fix for charset of the database */
 ALTER DATABASE `db` CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+/* Set czech time zone */
+set time_zone = '+01:00';
