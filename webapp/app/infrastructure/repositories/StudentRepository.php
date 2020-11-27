@@ -50,6 +50,17 @@ class StudentRepository implements  IStudentRepository {
      */
     public function getActiveStudentExams(string $studentCode)
     {
+        $resultSet = $this->database->fetchAll('CALL pr_get_active_student_list_exams(?)', $studentCode);
+        return $resultSet;
+    }
+
+    /**
+     * Fetch active and nonactive exam items for specific student code.
+     * @param string $studentCode
+     * @return array
+     */
+    public function getStudentExamList(string $studentCode)
+    {
         $resultSet = $this->database->fetchAll('CALL pr_get_student_list_exams(?)', $studentCode);
         return $resultSet;
     }
