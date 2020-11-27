@@ -42,6 +42,17 @@ class StudentRepository implements  IStudentRepository {
     {
         // TODO: Implement submitToExam() method.
     }
+
+    /**
+     * Fetch currently logged active student exams.
+     * @param string $studentCode
+     * @return array
+     */
+    public function getActiveStudentExams(string $studentCode)
+    {
+        $resultSet = $this->database->fetchAll('CALL pr_get_student_list_exams(?)', $studentCode);
+        return $resultSet;
+    }
 }
 
 

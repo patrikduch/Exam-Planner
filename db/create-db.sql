@@ -181,7 +181,7 @@ CREATE TABLE `ExamResult` (
 -- Structure of relation `ActiveExam zapsane_terminy`
 --
 
-CREATE TABLE `FinishedExam` (
+CREATE TABLE `ScheduledExam` (
   `exam_id` int(11) NOT NULL PRIMARY KEY,
   `student_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
   `result_id` smallint(6)
@@ -274,24 +274,13 @@ ADD CONSTRAINT `ActiveExamToExamDate_ibfk_1`
 FOREIGN KEY (`id`) REFERENCES `ExamDate` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
-ALTER TABLE `FinishedExam`
+ALTER TABLE `ScheduledExam`
 ADD CONSTRAINT `ScheduledExamToExamDate_ibfk_1`
-FOREIGN KEY (`exam_id`) REFERENCES `ExamDate` (`exam_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+FOREIGN KEY (`exam_id`) REFERENCES `ExamDate` (`exam_id`);
 
-
-ALTER TABLE `FinishedExam`
+ALTER TABLE `ScheduledExam`
 ADD CONSTRAINT `ScheduledExamToStudent_ibfk_1`
-FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-
-
-
-
-
-
-
-
-
+FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`);
 
 
 

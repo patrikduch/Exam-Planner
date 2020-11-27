@@ -37,7 +37,7 @@ final class StudentControl extends  Control {
         $this->foo = 'aa';
     }
 
-    public function handleChangeFoo() {
+    public function handleChangeFoo($examId) {
         $this->foo = 'Ahoj';
     }
 
@@ -46,8 +46,11 @@ final class StudentControl extends  Control {
      * Renders content for student users.
      */
     public function render() {
+        $studentDetail = $this->studentRepository->getStudentDetails($this->user->id);
+        $this->template->studentDetail = $studentDetail;
 
-        $this->template->studentDetail = $this->studentRepository->getStudentDetails($this->user->id);
+        $this->template->activeExams = $this->studentRepository->getActiveStudentExams($studentDetail->student_code);
+
         $this->template->foo = $this->foo;
         $this->template->render(__DIR__ . '/StudentControl.latte');
     }

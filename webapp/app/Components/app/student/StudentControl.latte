@@ -30,14 +30,28 @@
             <thead>
                 <tr>
                     <th scope="col">Název předmětu</th>
-                    <th scope="col">Ukončení</th>
+                    <th scope="col">Termín zkoušky</th>
                     <th scope="col">Počet kreditů</th>
                 </tr>
             </thead>
             <tbody>
-
-           
-
+                <tr n:foreach="$activeExams as $activeExam">
+                    {if $activeExam->is_exam_active}
+                        <th scope="row">{$activeExam->course_code}</th>
+                        <td>{$activeExam->exam_date}</td>
+                        <td>{$activeExam->course_credits}</td>
+                        <td>
+                            <a class="text-danger" n:href="changeFoo! $activeExam->exam_id">Odepsat</a>
+                        </td>
+                    {else}
+                        <th scope="row">{$activeExam->course_code}</th>
+                        <td>{$activeExam->exam_date}</td>
+                        <td>{$activeExam->course_credits}</td>
+                        <td>
+                            <a class="text-success" n:href="changeFoo! $activeExam->exam_id">Zapsat</a>
+                        </td>
+                    {/if}
+                </tr>
             </tbody>
         </table>
     </div>
