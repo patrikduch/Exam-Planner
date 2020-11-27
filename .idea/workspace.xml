@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,8 @@
       <workItem from="1606307307230" duration="12391000" />
       <workItem from="1606382320986" duration="13022000" />
       <workItem from="1606412635977" duration="9944000" />
-      <workItem from="1606465023637" duration="3150000" />
+      <workItem from="1606465023637" duration="11084000" />
+      <workItem from="1606483022412" duration="2628000" />
     </task>
     <servers />
   </component>

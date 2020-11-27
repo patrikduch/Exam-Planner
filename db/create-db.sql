@@ -142,7 +142,8 @@ CREATE TABLE `ExamDate` (
   `room_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
   `lecturer_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
   `course_code` varchar(5) COLLATE utf8_czech_ci NOT NULL,
-  `exam_date` datetime NOT NULL,
+  `exam_start_date` datetime NOT NULL,
+  `exam_end_date` datetime NOT NULL,
   `max_participants` smallint(6) NOT NULL,
   `note` varchar(200) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
@@ -284,9 +285,6 @@ FOREIGN KEY (`student_code`) REFERENCES `Student` (`student_code`);
 
 
 
-
-
-
-
 /* Fix for charset of the database */
 ALTER DATABASE `db` CHARACTER SET utf8 COLLATE utf8_general_ci;
+

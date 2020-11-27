@@ -30,7 +30,8 @@
             <thead>
                 <tr>
                     <th scope="col">Název předmětu</th>
-                    <th scope="col">Termín zkoušky</th>
+                    <th scope="col">Záčátek</th>
+                    <th scope="col">Konec</th>
                     <th scope="col">Počet kreditů</th>
                 </tr>
             </thead>
@@ -38,14 +39,16 @@
                 <tr n:foreach="$allExams as $exam">
                     {if $exam->is_exam_active}
                         <th scope="row">{$exam->course_code}</th>
-                        <td>{$exam->exam_date}</td>
+                        <td>{$exam->exam_start_date}</td>
+                        <td>{$exam->exam_end_date}</td>
                         <td>{$exam->course_credits}</td>
                         <td>
                             <a class="text-danger" n:href="changeFoo! $exam->exam_id">Odepsat</a>
                         </td>
                     {else}
                         <th scope="row">{$exam->course_code}</th>
-                        <td>{$exam->exam_date}</td>
+                        <td>{$exam->exam_start_date}</td>
+                        <td>{$exam->exam_end_date}</td>
                         <td>{$exam->course_credits}</td>
                         <td>
                             <a class="text-success" n:href="changeFoo! $exam->exam_id">Zapsat</a>
@@ -63,7 +66,8 @@
             <tr>
                 <th scope="col">Zkratka předmětu</th>
                 <th scope="col">Název předmětu</th>
-                <th scope="col">Termín zkoušky</th>
+                <th scope="col">Začátek</th>
+                <th scope="col">Konec</th>
                 <th scope="col">Počet kreditů</th>
             </tr>
             </thead>
@@ -71,7 +75,8 @@
                 <tr n:foreach="$activeExams as $activeExam">
                     <th scope="row">{$activeExam->course_code}</th>
                     <td>{$activeExam->course_title}</td>
-                    <td>{$activeExam->exam_date}</td>
+                    <td>{$activeExam->exam_start_date}</td>
+                    <td>{$activeExam->exam_end_date}</td>
                     <td>{$activeExam->course_credits}</td>
                 </tr>
             </tbody>
