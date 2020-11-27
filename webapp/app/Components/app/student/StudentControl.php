@@ -39,6 +39,8 @@ final class StudentControl extends  Control {
 
     public function handleChangeFoo($examId) {
         $this->foo = 'Ahoj';
+
+        $this->studentRepository->examSignout($examId);
     }
 
 
