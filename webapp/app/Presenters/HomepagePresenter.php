@@ -19,9 +19,6 @@ final class HomepagePresenter extends BasePresenter
     /** @var GuestControlFactory $guestControlFactory @inject */
     public $guestControlFactory;
 
-    /** @var LecturerControlFactory $lecturerControlFactory @inject */
-    public $lecturerControlFactory;
-
     /** @var StudentControlFactory $studentControlFactory @inject */
     public $studentControlFactory;
 
@@ -30,6 +27,9 @@ final class HomepagePresenter extends BasePresenter
      */
     public function renderDefault()
     {
+        if ($this->user->isInRole('lecturer')) {
+            $this->redirect('Lecturer:default');
+        }
     }
 
     /**
@@ -39,15 +39,6 @@ final class HomepagePresenter extends BasePresenter
     protected function createComponentGuestControl(): GuestControl
     {
         return $this->guestControlFactory->create();
-    }
-
-    /**
-     * Create Lecturer component which is used to render lecturer area.
-     * @return LecturerControl Instance of LecturerControl.
-     */
-    protected function createComponentLecturerControl(): LecturerControl
-    {
-        return $this->lecturerControlFactory->create($this->user);
     }
 
     protected function createComponentStudentControl(): StudentControl

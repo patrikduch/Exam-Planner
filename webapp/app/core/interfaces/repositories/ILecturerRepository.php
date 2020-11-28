@@ -13,4 +13,7 @@ interface ILecturerRepository {
     public function getScheduledExams(string $lecturerCode);
     public function getLecturerPreDegrees(string $lecturerCode);
     public function getLecturerPostDegrees(string $lecturerCode);
+    public function getLecturerRooms();
+    public function addNewExam(string $room_code, string $lecturerCode, string $courseCode, string $examStartDate,
+                                string $examEndDate, int $maxParticipants, string $note);
 }

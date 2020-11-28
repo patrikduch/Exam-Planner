@@ -4,10 +4,6 @@
 	{control guestControl}
 {/if}
 
-{if $user->isInRole('lecturer')}
-	{control lecturerControl}
-{/if}
-
 {if $user->isInRole('student')}
 	{control studentControl}
 {/if}

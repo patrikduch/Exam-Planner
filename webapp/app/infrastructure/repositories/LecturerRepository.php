@@ -9,7 +9,7 @@ use Nette;
  * Class LecturerRepository
  * @package App\Infrastructure\Repositories
  */
-class LecturerRepository implements ILecturerRepository {
+final class LecturerRepository implements ILecturerRepository {
 
     /**
      * @var Nette\Database\Context  $database  Instance of Nette database.
@@ -91,5 +91,40 @@ class LecturerRepository implements ILecturerRepository {
             'CALL pr_get_lecturer_exams(?,?)', $lecturerCode, false
         );
         return $scheduledExams;
+    }
+
+    /**
+     * Fetch all lecturer rooms for new exam.
+     * @return array
+     */
+    public function getLecturerRooms()
+    {
+        $getLecturerRooms = $this->database->table('ExamRoom')
+            ->fetchAll();
+
+        return $getLecturerRooms;
+    }
+
+    public function addNewExam(
+        string $room_code,
+        string $lecturerCode,
+        string $courseCode,
+        string $examStartDate,
+        string $examEndDate,
+        int $maxParticipants,
+        string $note
+    )
+    {
+        $row = $this->database->table('ExamDate')->insert([
+            'room_code' => $room_code,
+            'lecturer_code' => $lecturerCode,
+            'course_code' => $courseCode,
+            'exam_start_date' => $examStartDate,
+            'exam_end_date' => $examEndDate,
+            'max_participants' => $maxParticipants,
+            'note' => $note
+        ]);
+
+        return $row;
     }
 }

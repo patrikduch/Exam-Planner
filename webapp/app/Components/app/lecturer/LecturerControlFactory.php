@@ -3,6 +3,7 @@
 namespace App\Components\App\Lecturer;
 
 use App\Infrastructure\Repositories\LecturerRepository;
+use Nette\Http\IRequest;
 use Nette\Security\User;
 
 /**
@@ -29,8 +30,8 @@ final class LecturerControlFactory {
      * @param User $user
      * @return LecturerControl
      */
-    public function create(User $user) {
-        $lecturerControl = new LecturerControl($user, $this->lecturerRepository);
+    public function create(User $user, IRequest $request) {
+        $lecturerControl = new LecturerControl($user, $this->lecturerRepository, $request);
         return $lecturerControl;
     }
 }

@@ -19,7 +19,6 @@ di:
 
 services:
 	router: App\Router\RouterFactory::createRouter
-
 	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])
 
 	projectDetailRepository:
@@ -30,10 +29,8 @@ services:
 	    class: App\Repositories\StudentRepository
 	lecturerRepository:
 	    class: App\Infrastructure\Repositories\LecturerRepository
-
 	passwordEncrypterService:
 	    class: App\Services\PasswordEncrypter
-
 	authenticator:
 	    class: App\Services\Authenticator
 
@@ -43,5 +40,7 @@ services:
 	    class: App\Components\App\Guest\GuestControlFactory
 	LecturerControFactory:
 	    class:  App\Components\App\Lecturer\LecturerControlFactory
+	LecturerAddExamFormControlFactory:
+	    class: App\Components\App\Lecturer\LecturerAddExamFormControlFactory
 	StudentControlFactory:
 	    class: App\Components\App\Student\StudentControlFactory

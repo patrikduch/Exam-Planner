@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'cf9357e5f42c7cf2a6c5eeac51529d7421ac8f64',
+    'reference' => '867d38eda72c56b1de367cc45787532c21a8ddea',
     'name' => 'nette/web-project',
   ),
   'versions' => 
@@ -103,12 +103,12 @@
     ),
     'nette/http' => 
     array (
-      'pretty_version' => 'v3.0.4',
-      'version' => '3.0.4.0',
+      'pretty_version' => 'v3.0.5',
+      'version' => '3.0.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e4d8d360c66c8af9512ca13ab629d312af2b3ce3',
+      'reference' => '24647c6c52a9ed008b2d39494a8c4fc23c48e487',
     ),
     'nette/mail' => 
     array (
@@ -198,7 +198,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'cf9357e5f42c7cf2a6c5eeac51529d7421ac8f64',
+      'reference' => '867d38eda72c56b1de367cc45787532c21a8ddea',
     ),
     'symfony/thanks' => 
     array (

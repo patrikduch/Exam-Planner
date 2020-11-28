@@ -4,6 +4,7 @@ namespace App\Components\App\Lecturer;
 
 use App\Infrastructure\Repositories\LecturerRepository;
 use Nette\Application\UI\Control;
+use Nette\Http\IRequest;
 use Nette\Security\User;
 
 /**
@@ -27,7 +28,7 @@ final class LecturerControl extends Control {
      * @param User $user
      * @param LecturerRepository $lecturerRepository
      */
-    public function __construct(User $user, LecturerRepository  $lecturerRepository) {
+    public function __construct(User $user, LecturerRepository  $lecturerRepository, IRequest  $request) {
         $this->lectureRepository = $lecturerRepository;
         $this->user = $user;
     }

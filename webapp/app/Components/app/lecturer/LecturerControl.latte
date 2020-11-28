@@ -34,7 +34,9 @@
                 <td>{$course->title}</td>
                 <td>{$course->credits}</td>
                 <td>{$course->classification}</td>
-                <td><button class="btn btn-info">Vytvořit termín</button></td>
+                <td>
+                    <a href="{plink Lecturer:addExam $course->course_code, $course->title}">Vytvořit termín</a>
+                </td>
             </tr>
             </tbody>
         </table>

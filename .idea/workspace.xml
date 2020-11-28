@@ -20,18 +20,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_get_student.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Dtos/ExamDateCreateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/LecturerPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Lecturer/addExam.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Lecturer/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_courses.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_courses.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_exams.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_post_degrees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_post_degrees.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_pre_degrees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_pre_degrees.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControlFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/contributing.md" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/contributing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/license.md" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/license.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpDI/HttpExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpDI/HttpExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpDI/SessionExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpDI/SessionExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/SessionPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/SessionPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/templates/SessionPanel.panel.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/templates/SessionPanel.panel.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/templates/SessionPanel.tab.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Bridges/HttpTracy/templates/SessionPanel.tab.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Context.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/FileUpload.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/FileUpload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/IRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/IRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/IResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/IResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/RequestFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/RequestFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/SessionSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/SessionSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Url.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/Url.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UrlImmutable.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UrlImmutable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UrlScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UrlScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UserStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/vendor/nette/http/src/Http/UserStorage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +124,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Exam-Planner\webapp\app\Presenters" />
       <recent name="D:\Projects\Exam-Planner\db\procedures\lecturer" />
+      <recent name="D:\Projects\Exam-Planner\webapp\app\Components\app\lecturer\forms\create" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,7 +155,8 @@
       <workItem from="1606382320986" duration="13022000" />
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
-      <workItem from="1606483022412" duration="16766000" />
+      <workItem from="1606483022412" duration="38234000" />
+      <workItem from="1606600269661" duration="4935000" />
     </task>
     <servers />
   </component>
@@ -140,18 +180,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="309" y="116" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605781908052" />
-    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605830211755">
+    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606560280408">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1605830211755" />
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606516844401">
+    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1606560280408" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606593082786">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606516844401" />
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606006041102">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606593082786" />
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606595738284">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1606006041102" />
+    <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1707.920@0.0.1707.920" timestamp="1606595738284" />
     <state x="693" y="341" key="DockerComposeFileDialog" timestamp="1605781902549">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -160,13 +200,21 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="635" y="228" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605781901158" />
+    <state x="647" y="184" key="NewPhpClassDialog" timestamp="1606592949240">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="647" y="184" key="NewPhpClassDialog/0.0.1707.920@0.0.1707.920" timestamp="1606592949240" />
     <state x="671" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606061483677">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="671" y="375" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920@0.0.1707.920" timestamp="1606061483677" />
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606500815245">
+    <state x="572" y="232" key="refactoring.ChangeSignatureDialog" timestamp="1606604318409">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606500815245" />
+    <state x="572" y="232" key="refactoring.ChangeSignatureDialog/0.0.1707.920@0.0.1707.920" timestamp="1606604318409" />
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606598195540">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606598195540" />
   </component>
 </project>
