@@ -15,6 +15,13 @@ INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCW
     password: patrikduch
 */
 
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('sil0014', 'Tomáš', 'Silber', 1);
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('silber', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
 INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
 
 
