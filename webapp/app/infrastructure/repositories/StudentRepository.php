@@ -28,8 +28,7 @@ class StudentRepository implements  IStudentRepository {
      */
     public function getStudentDetails(int $userId)
     {
-       $resultSet = $this->database->table('Student')
-           ->fetch('SELECT * FROM Student WHERE userId = ?', $userId);
+       $resultSet = $this->database->fetch('CALL pr_get_student(?)', $userId);
 
        return $resultSet;
     }
@@ -67,10 +66,11 @@ class StudentRepository implements  IStudentRepository {
 
     /**
      * @param int $examId
+     * @param string $studentCode
      */
-    public function examSignout(int $examId)
+    public function examSignout(int $examId, string $studentCode)
     {
-        $this->database->query('CALL pr_update_active_student_exam(?)', $examId);
+        $this->database->query('CALL pr_update_active_student_exam(?,?)', $examId, $studentCode);
     }
 }
 

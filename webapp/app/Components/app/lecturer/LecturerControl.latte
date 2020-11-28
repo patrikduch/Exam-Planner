@@ -59,7 +59,7 @@
                 <th scope="row">{$course->course_code}</th>
                 <td>{$lecturerExam->room_code}</td>
                 <td>{$lecturerExam->note}</td>
-                <td>{$lecturerExam->exam_date}</td>
+                <td>{$lecturerExam->exam_start_date}</td>
                 <td><button class="btn btn-danger"><i class="fa fa-minus-circle"></i></button> <button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
             </tr>
             </tbody>
@@ -85,7 +85,7 @@
                    <th scope="row">{$lecturerScheduledExam->course_code}</th>
                    <td>{$lecturerScheduledExam->room_code}</td>
                    <td>{$lecturerScheduledExam->note}</td>
-                   <td>{$lecturerScheduledExam->exam_date}</td>
+                   <td>{$lecturerScheduledExam->exam_start_date}</td>
                    <td><button class="btn btn-success">Udělit hodnocení</button></td>
                </tr>
             </tbody>

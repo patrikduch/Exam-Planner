@@ -12,10 +12,6 @@ use Nette\Security\User;
  */
 final class StudentControl extends  Control {
 
-
-    private $foo;
-
-
     /**
      * @var StudentRepository $studentRepository Student data repository.
      */
@@ -34,13 +30,10 @@ final class StudentControl extends  Control {
     public function __construct(StudentRepository  $studentRepository, User $user) {
         $this->studentRepository = $studentRepository;
         $this->user = $user;
-        $this->foo = 'aa';
     }
 
-    public function handleChangeFoo($examId) {
-        $this->foo = 'Ahoj';
-
-        $this->studentRepository->examSignout($examId);
+    public function handleChangeFoo($examId, $studentCode) {
+        $this->studentRepository->examSignout($examId, $studentCode);
     }
 
 
@@ -55,7 +48,6 @@ final class StudentControl extends  Control {
         $this->template->activeExams = $this->studentRepository
             ->getActiveStudentExams(($studentDetail->student_code));
 
-        $this->template->foo = $this->foo;
         $this->template->render(__DIR__ . '/StudentControl.latte');
     }
 

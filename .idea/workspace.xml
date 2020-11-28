@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/procedures/student/pr_update_active_student_exam.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_get_student.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_courses.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_courses.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/pr_get_lecturer_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_exams.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
@@ -78,6 +85,11 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Exam-Planner\db\procedures\lecturer" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -104,7 +116,7 @@
       <workItem from="1606382320986" duration="13022000" />
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
-      <workItem from="1606483022412" duration="11270000" />
+      <workItem from="1606483022412" duration="16766000" />
     </task>
     <servers />
   </component>

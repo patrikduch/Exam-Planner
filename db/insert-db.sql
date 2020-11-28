@@ -15,14 +15,14 @@ INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCW
     password: patrikduch
 */
 
-INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('sil0014', 'Tomáš', 'Silber', 1);
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
 
 INSERT INTO User (username, PASSWORD, role) VALUES ('silber', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
 /*
     password: patrikduch
 */
 
-INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('sil0014', 'Tomáš', 'Silber', 5);
 
 
 INSERT INTO User (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
@@ -95,6 +95,12 @@ INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','VYDAP')
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','SWINZ');
+
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','VYDAP');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','XFUMO');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','NUMX2');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','SWINZ');
+
 
 INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c116', 'Budova C', 15);
 INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c112', 'Budova C', 10);
