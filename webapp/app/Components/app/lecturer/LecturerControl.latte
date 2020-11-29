@@ -35,7 +35,7 @@
                 <td>{$course->credits}</td>
                 <td>{$course->classification}</td>
                 <td>
-                    <a href="{plink Lecturer:addExam $course->course_code, $course->title}">Vytvořit termín</a>
+                    <a class="btn btn-info" role="button" href="{plink Lecturer:addExam $course->course_code, $course->title}"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 </td>
             </tr>
             </tbody>
@@ -63,10 +63,8 @@
                 <td>{$lecturerExam->note}</td>
                 <td>{$lecturerExam->exam_start_date}</td>
                 <td>
-                    <button class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
-                    <a href="{plink Lecturer:editExam $lecturerExam->exam_id, $lecturerExam->course_code, $lecturerExam->title}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                    <a href="{plink :removeScheduledExam! $lecturerExam->exam_id}">Odstranit</a>
-                    <button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <a class="btn btn-info" role="button" href="{plink Lecturer:editExam $lecturerExam->exam_id, $lecturerExam->course_code, $lecturerExam->title}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a class="btn btn-danger" role="button" href="{plink :removeScheduledExam! $lecturerExam->exam_id}"><i class="fa fa-minus-circle"></i></a>
                 </td>
             </tr>
             </tbody>

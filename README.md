@@ -23,6 +23,14 @@ Contributte bootstrap 4 forms
     https://github.com/contributte/forms-bootstrap
 </ul>
 
+# Db preparation
+
+db/procedures = MySQL procedures that encapsulates some advanced SQL commands.
+
+create-db.sql = defines structure of relation database
+
+insert-db.sql = initial data for developed IS
+
 
 # Support
 

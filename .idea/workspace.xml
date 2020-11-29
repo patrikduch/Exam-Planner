@@ -20,23 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/procedures/lecturer/ pr_get_exam_detail.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/update/LecturerEditExamFormControl.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/update/LecturerEditExamFormControl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/update/LecturerEditExamFormControlFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Lecturer/editExam.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_exams.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/create/LecturerAddExamFormControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/create/LecturerAddExamFormControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControlFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/create/LecturerAddExamFormControlFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/LecturerPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/LecturerPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +112,7 @@
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
       <workItem from="1606483022412" duration="38234000" />
-      <workItem from="1606600269661" duration="28334000" />
+      <workItem from="1606600269661" duration="29976000" />
     </task>
     <servers />
   </component>
@@ -182,9 +168,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="572" y="232" key="refactoring.ChangeSignatureDialog/0.0.1707.920@0.0.1707.920" timestamp="1606604318409" />
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606598195540">
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1606683308607">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606598195540" />
+    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606683308607" />
   </component>
 </project>
