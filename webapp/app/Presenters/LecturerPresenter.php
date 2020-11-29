@@ -36,7 +36,20 @@ final class LecturerPresenter extends BasePresenter {
 
     }
 
+    /**
+     * Render form for adding new exam dates.
+     * @param string $courseCode
+     * @param string $title
+     */
     public function renderAddExam(string $courseCode, string $title) {
+    }
+
+    /**
+     * Render form for adding new exam scores for particular students.
+     */
+    public function renderAddExamScore() {
+
+
     }
 
     /**
@@ -56,7 +69,6 @@ final class LecturerPresenter extends BasePresenter {
      */
     public function handleRemoveScheduledExam(int $examId) {
         $this->lecturerRepository->deleteExam($examId);
-
         $this->redirect('Lecturer:default');
     }
 
@@ -75,7 +87,4 @@ final class LecturerPresenter extends BasePresenter {
     {
         return $this->lecturerControlFactory->create($this->user, $this->getHttpRequest());
     }
-
-
-
 }

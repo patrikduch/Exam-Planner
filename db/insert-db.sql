@@ -136,3 +136,14 @@ INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
 
 INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);
 INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);
+
+
+INSERT INTO ExamResult (description, type) VALUES ('Zápočet', 'N');
+INSERT INTO ExamResult (description, type) VALUES ('Zápočet', 'N');
+
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'A');
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'B');
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'C');
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'D');
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'E');
+INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'F');

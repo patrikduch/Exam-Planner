@@ -171,11 +171,10 @@ CREATE TABLE `ExamRoom` (
 --
 
 CREATE TABLE `ExamResult` (
-  `id` smallint(6) NOT NULL,
+  `id` smallint(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `description` varchar(20) COLLATE utf8_czech_ci NOT NULL,
   `type` varchar(2) COLLATE utf8_czech_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
-
 -- --------------------------------------------------------
 
 --

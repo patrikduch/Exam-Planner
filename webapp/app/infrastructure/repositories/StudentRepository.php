@@ -34,15 +34,6 @@ class StudentRepository implements  IStudentRepository {
     }
 
     /**
-     * Submit to currently active exams.
-     * @param int $userId User identifier of targeted student.
-     */
-    public function submitToExam(int $userId)
-    {
-        // TODO: Implement submitToExam() method.
-    }
-
-    /**
      * Fetch currently logged active student exams.
      * @param string $studentCode
      * @return array
@@ -65,13 +56,25 @@ class StudentRepository implements  IStudentRepository {
     }
 
     /**
-     * Signout of exam.
+     * Sign in or signout of particular exam.
      * @param int $examId
+     * @param bool $isActive
      * @param string $studentCode
+     * @return array|bool|int|iterable|Nette\Database\Table\ActiveRow|Nette\Database\Table\Selection|\Traversable
      */
-    public function examSignout(int $examId, string $studentCode)
+    public function examSignout(int $examId, bool $isActive, string $studentCode)
     {
-        $this->database->query('CALL pr_update_active_student_exam(?,?)', $examId, $studentCode);
+        if (!$isActive) {
+            return $this->database->table('ScheduledExam')->insert([
+                'exam_id' => $examId,
+                'student_code' => $studentCode,
+                'result_id' => NULL,
+            ]);
+        } else {
+            return $this->database->table('ScheduledExam')
+                ->where('exam_id', $examId)
+                ->delete();
+        }
     }
 }
 

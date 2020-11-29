@@ -43,6 +43,7 @@ https://forum.nette.org/cs/29084-po-odeslani-formulare-se-neoveri-shoda-novych-h
 https://pla.nette.org/cs/validace-prvku-v-zavislosti-na-hodnote-jinych-prvku
 https://forum.nette.org/en/24926-url-getqueryparameters-doesn-t-work
 https://www.geeksforgeeks.org/comparing-two-dates-in-php/
+https://forum.nette.org/cs/25303-refresh-stranky-po-akci-ktera-jen-meni-data
 
 
 

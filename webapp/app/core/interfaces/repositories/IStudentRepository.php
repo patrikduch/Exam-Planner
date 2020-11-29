@@ -10,7 +10,6 @@ interface IStudentRepository {
     public function getStudentDetails(int $userId);
     public function getStudentExamList(string $studentCode);
     public function getActiveStudentExams(string $studentCode);
-    public function submitToExam(int $userId);
-    public function examSignout(int $examId, string $studentCode);
+    public function examSignout(int $examId, bool $isActive, string $studentCode);
 }
 

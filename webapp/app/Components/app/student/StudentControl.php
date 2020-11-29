@@ -32,8 +32,9 @@ final class StudentControl extends  Control {
         $this->user = $user;
     }
 
-    public function handleChangeFoo($examId, $studentCode) {
-        $this->studentRepository->examSignout($examId, $studentCode);
+    public function handleChangeFoo($examId, bool $isActive, $studentCode) {
+        $this->studentRepository->examSignout($examId, $isActive, $studentCode);
+        $this->redirect('this');
     }
 
 
