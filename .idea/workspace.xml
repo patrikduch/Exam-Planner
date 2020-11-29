@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +109,7 @@
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
       <workItem from="1606483022412" duration="38234000" />
-      <workItem from="1606600269661" duration="10279000" />
+      <workItem from="1606600269661" duration="11232000" />
     </task>
     <servers />
   </component>
