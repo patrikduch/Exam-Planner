@@ -79,16 +79,14 @@ final class LecturerAddExamFormControl extends Control {
 
         $secondRow= $form->addRow();
         $secondRow->addCell(4)
-            ->addPassword('startDate', 'Začátek termínu')
-            ->setRequired('Prosím zadejte začátetní termín')
-            ->setHtmlType('date');
+            ->addDateTime('startDate', 'Začátek termínu')
+            ->setRequired('Prosím zadejte začátetní termín');
 
 
         $thirdRow = $form->addRow();
         $thirdRow->addCell(4)
-            ->addPassword('endDate', 'Konec termínu')
-            ->setRequired('Prosím zadejte konec termínu')
-            ->setHtmlType('date');
+            ->addDateTime('endDate', 'Konec termínu')
+            ->setRequired('Prosím zadejte konec termínu');
 
         $fourthRow = $form->addRow();
         $fourthRow->addCell(4)
@@ -97,7 +95,8 @@ final class LecturerAddExamFormControl extends Control {
         $fifthRow = $form->addRow();
         $fifthRow->addCell(4)
             ->addText('roomSize',  'Počet míst')
-            ->setRequired('Prosím zadejte maximální počet míst pro zadaný termín zkoušky');
+            ->setRequired('Prosím zadejte maximální počet míst pro zadaný termín zkoušky')
+            ->addRule($form::INTEGER, 'Počet míst musí být platné číslo');
 
         $sixthRow = $form->addRow();
         $sixthRow->addCell(4)
@@ -128,8 +127,8 @@ final class LecturerAddExamFormControl extends Control {
             $data->lectureRoom,
             $lecturerEntity->lecturer_code,
             $this->httpRequest->getQuery("courseCode"),
-            $data->startDate,
-            $data->endDate,
+            $data->startDate->format('Y-m-d H:i:s'),
+            $data->endDate->format('Y-m-d H:i:s'),
             $data->roomSize,
             $data->note
         );
