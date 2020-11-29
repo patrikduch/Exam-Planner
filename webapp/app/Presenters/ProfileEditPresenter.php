@@ -29,8 +29,8 @@ final class ProfileEditPresenter extends BasePresenter {
     }
 
     /**
-     * Create form control for option to change current user password.
-     * @return BootstrapForm Instance of Bootstrap form.
+     * Create forms control for option to change current user password.
+     * @return BootstrapForm Instance of Bootstrap forms.
      */
     protected function createComponentProfileEditForm(): BootstrapForm
     {

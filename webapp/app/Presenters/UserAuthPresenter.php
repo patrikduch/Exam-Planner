@@ -35,8 +35,8 @@ final class UserAuthPresenter extends BasePresenter {
     }
 
     /**
-     * Creation of login form.
-     * @return BootstrapForm Returns Boostrap form.
+     * Creation of login forms.
+     * @return BootstrapForm Returns Boostrap forms.
      */
     protected function createComponentLoginForm(): BootstrapForm
     {
@@ -61,8 +61,8 @@ final class UserAuthPresenter extends BasePresenter {
 
     /**
      * Form processing handler.
-     * @param BootstrapForm $form Bootstrap form instance.
-     * @param $data data Passed form data.
+     * @param BootstrapForm $form Bootstrap forms instance.
+     * @param $data data Passed forms data.
      * @throws Nette\Application\AbortException
      * @throws Nette\Security\AuthenticationException
      */

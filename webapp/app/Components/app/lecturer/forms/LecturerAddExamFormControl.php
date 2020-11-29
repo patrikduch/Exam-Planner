@@ -2,6 +2,8 @@
 
 namespace App\Components\App\Lecturer;
 
+use App\Helpers\Forms\MyValidator;
+use App\Helpers\Forms\MyValidators;
 use App\Infrastructure\Repositories\LecturerRepository;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
@@ -9,6 +11,8 @@ use HttpRequest;
 use Nette\Application\UI\Control;
 use Nette\Http\IRequest;
 use Nette\Security\User;
+
+
 
 final class LecturerAddExamFormControl extends Control {
 
@@ -86,7 +90,17 @@ final class LecturerAddExamFormControl extends Control {
         $thirdRow = $form->addRow();
         $thirdRow->addCell(4)
             ->addDateTime('endDate', 'Konec termínu')
-            ->setRequired('Prosím zadejte konec termínu');
+            ->setRequired('Prosím zadejte konec termínu')
+            ->addRule(function($control, $args) {
+                $dateTimestamp1 = strtotime($args[1]);
+                $dateTimestamp2 = strtotime($args[0]->format('Y-m-d H:i:s'));
+
+                return $dateTimestamp1 > $dateTimestamp2;
+
+            }, 'Zkontrolujte rozmezi mezi začátečním a koncovým datem', [
+                $form['startDate'],
+                $form['endDate']
+            ]);
 
         $fourthRow = $form->addRow();
         $fourthRow->addCell(4)
@@ -102,7 +116,6 @@ final class LecturerAddExamFormControl extends Control {
         $sixthRow->addCell(4)
             ->addText('note', 'Poznámka')
             ->setRequired('Prosím zadejte poznamku pro zadaný termín');
-
 
         $form->addSubmit('send', 'Vytvořit termín');
         $form->onSuccess[] = [$this, 'formSucceeded'];

@@ -30,6 +30,8 @@ https://forum.nette.org/cs/32612-redirect-z-formulare-v-komonente
 https://doc.nette.org/cs/3.0/components
 https://doc.nette.org/cs/3.0/http-request-response
 https://api.nette.org/2.3/source-Application.UI.Presenter.php.html#1349-1364
+https://forum.nette.org/cs/30471-nette-forms-vlastni-validator-addrule
+https://forum.nette.org/cs/29084-po-odeslani-formulare-se-neoveri-shoda-novych-hesel
 
 
 

@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/guest/GuestControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/LecturerAddExamFormControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/UserAuthPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/UserAuthPresenter.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +112,7 @@
       <workItem from="1606412635977" duration="9944000" />
       <workItem from="1606465023637" duration="11084000" />
       <workItem from="1606483022412" duration="38234000" />
-      <workItem from="1606600269661" duration="11232000" />
+      <workItem from="1606600269661" duration="16607000" />
     </task>
     <servers />
   </component>
@@ -133,10 +136,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="309" y="116" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605781908052" />
-    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606560280408">
+    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606650494828">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1606560280408" />
+    <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1606650494828" />
     <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606593082786">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
