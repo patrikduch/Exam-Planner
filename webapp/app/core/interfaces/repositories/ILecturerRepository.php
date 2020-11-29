@@ -16,4 +16,6 @@ interface ILecturerRepository {
     public function getLecturerRooms();
     public function addNewExam(string $room_code, string $lecturerCode, string $courseCode, string $examStartDate,
                                 string $examEndDate, int $maxParticipants, string $note);
+
+    public function deleteExam(int $examId);
 }

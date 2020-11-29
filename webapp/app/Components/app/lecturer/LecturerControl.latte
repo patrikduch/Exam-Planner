@@ -58,11 +58,16 @@
             </thead>
             <tbody>
             <tr n:foreach="$lecturerExams as $lecturerExam">
+                {$lecturerExam->exam_id}
                 <th scope="row">{$course->course_code}</th>
                 <td>{$lecturerExam->room_code}</td>
                 <td>{$lecturerExam->note}</td>
                 <td>{$lecturerExam->exam_start_date}</td>
-                <td><button class="btn btn-danger"><i class="fa fa-minus-circle"></i></button> <button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td>
+                    <button class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
+                    <a href="{plink :removeScheduledExam! $lecturerExam->exam_id}">Odstranit</a>
+                    <button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                </td>
             </tr>
             </tbody>
         </table>

@@ -32,6 +32,9 @@ https://doc.nette.org/cs/3.0/http-request-response
 https://api.nette.org/2.3/source-Application.UI.Presenter.php.html#1349-1364
 https://forum.nette.org/cs/30471-nette-forms-vlastni-validator-addrule
 https://forum.nette.org/cs/29084-po-odeslani-formulare-se-neoveri-shoda-novych-hesel
+https://pla.nette.org/cs/validace-prvku-v-zavislosti-na-hodnote-jinych-prvku
+https://forum.nette.org/en/24926-url-getqueryparameters-doesn-t-work
+https://www.geeksforgeeks.org/comparing-two-dates-in-php/
 
 
 

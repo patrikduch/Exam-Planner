@@ -24,11 +24,23 @@ final class LecturerPresenter extends BasePresenter {
     /** @var LecturerControlFactory $lecturerControlFactory @inject */
     public $lecturerControlFactory;
 
+    /** @var LecturerRepository $lecturerRepository @inject */
+    public $lecturerRepository;
+
+
     /**
      * Renders default view (default.latte).
      */
     public function renderDefault() {
 
+    }
+
+    /**
+     * Remove scheduled exam that is not in active mode.
+     * @param int $examId
+     */
+    public function handleRemoveScheduledExam(int $examId) {
+        $this->lecturerRepository->deleteExam($examId);
     }
 
     public function renderAddExam(string $courseCode, string $title) {

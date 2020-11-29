@@ -105,6 +105,17 @@ final class LecturerRepository implements ILecturerRepository {
         return $getLecturerRooms;
     }
 
+    /**
+     * Adding new exam date for students to sign.
+     * @param string $room_code
+     * @param string $lecturerCode
+     * @param string $courseCode
+     * @param string $examStartDate
+     * @param string $examEndDate
+     * @param int $maxParticipants
+     * @param string $note
+     * @return array|bool|int|iterable|Nette\Database\Table\ActiveRow|Nette\Database\Table\Selection|\Traversable
+     */
     public function addNewExam(
         string $room_code,
         string $lecturerCode,
@@ -126,5 +137,16 @@ final class LecturerRepository implements ILecturerRepository {
         ]);
 
         return $row;
+    }
+
+    /**
+     * Delete created active exam, that can be attended by limited number of participants.
+     * @param int $examId Identifier of particular exam.
+     */
+    public function deleteExam(int $examId)
+    {
+        $this->database->beginTransaction();
+        $this->database->query('DELETE FROM ExamDate WHERE exam_id = ?', $examId);
+        $this->database->commit();
     }
 }
