@@ -183,7 +183,7 @@ CREATE TABLE `ExamResult` (
 --
 
 CREATE TABLE `ScheduledExam` (
-  `exam_id` int(11) NOT NULL PRIMARY KEY,
+  `exam_id` int(11) NOT NULL,
   `student_code` varchar(10) COLLATE utf8_czech_ci NOT NULL,
   `result_id` smallint(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
@@ -249,8 +249,6 @@ FOREIGN KEY (`lecturer_code`) REFERENCES `Lecturer` (`lecturer_code`) ON DELETE 
 ADD CONSTRAINT `LecturerCourse_ibfk_2`
 FOREIGN KEY (`course_code`) REFERENCES `Course` (`course_code`)
 ON DELETE CASCADE ON UPDATE CASCADE;
-
-
 
 
 ALTER TABLE `ExamDate`

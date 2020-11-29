@@ -41,6 +41,10 @@ services:
 	LecturerControFactory:
 	    class:  App\Components\App\Lecturer\LecturerControlFactory
 	LecturerAddExamFormControlFactory:
-	    class: App\Components\App\Lecturer\LecturerAddExamFormControlFactory
+	    class: App\Components\App\Lecturer\Forms\Create\LecturerAddExamFormControlFactory
+	LecturerEditExamFormControlFactory:
+	    class: App\Components\App\Lecturer\Forms\Update\LecturerEditExamFormControlFactory
+
 	StudentControlFactory:
 	    class: App\Components\App\Student\StudentControlFactory
+

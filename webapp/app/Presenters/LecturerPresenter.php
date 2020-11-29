@@ -2,15 +2,13 @@
 
 namespace App\Presenters;
 
-use App\Components\App\Guest\GuestControl;
-use App\Components\App\Guest\GuestControlFactory;
-use App\Components\App\Lecturer\LecturerAddExamFormControl;
-use App\Components\App\Lecturer\LecturerAddExamFormControlFactory;
+use App\Components\App\Lecturer\Forms\Create\LecturerAddExamFormControl;
+use App\Components\App\Lecturer\Forms\Create\LecturerAddExamFormControlFactory;
+use App\Components\App\Lecturer\Forms\Update\LecturerEditExamFormControl;
+use App\Components\App\Lecturer\Forms\Update\LecturerEditExamFormControlFactory;
 use App\Components\App\Lecturer\LecturerControl;
 use App\Components\App\Lecturer\LecturerControlFactory;
 use App\Infrastructure\Repositories\LecturerRepository;
-use Contributte\FormsBootstrap\BootstrapForm;
-use Contributte\FormsBootstrap\Enums\RenderMode;
 
 /**
  * Class LecturerPresenter
@@ -20,6 +18,9 @@ final class LecturerPresenter extends BasePresenter {
 
     /** @var LecturerAddExamFormControlFactory $lecturerAddExamFormControlFactory @inject */
     public $lecturerAddExamFormControlFactory;
+
+    /** @var LecturerEditExamFormControlFactory $lectureEditExamFormControlFactory @inject */
+    public $lectureEditExamFormControlFactory;
 
     /** @var LecturerControlFactory $lecturerControlFactory @inject */
     public $lecturerControlFactory;
@@ -35,28 +36,46 @@ final class LecturerPresenter extends BasePresenter {
 
     }
 
+    public function renderAddExam(string $courseCode, string $title) {
+    }
+
+    /**
+     * Renders edit form for updating selected exam.
+     * @param int $exam_id
+     * @param string $courseCode
+     * @param string $title
+     */
+    public function renderEditExam(int $exam_id, string $courseCode, string $title) {
+
+    }
+
+
     /**
      * Remove scheduled exam that is not in active mode.
      * @param int $examId
      */
     public function handleRemoveScheduledExam(int $examId) {
         $this->lecturerRepository->deleteExam($examId);
+
+        $this->redirect('Lecturer:default');
     }
 
-    public function renderAddExam(string $courseCode, string $title) {
 
-
-        //$this->template->test = dump($this->getHttpRequest()->getQuery());
-    }
-
-    protected function createComponentAddNewExamFormControl(): LecturerAddExamFormControl
+    protected function createComponentAddNewExamFormControl():LecturerAddExamFormControl
     {
         return $this->lecturerAddExamFormControlFactory->create($this->user, $this->getHttpRequest());
+    }
+
+    protected function createComponentEditExamFormControl():LecturerEditExamFormControl
+    {
+        return $this->lectureEditExamFormControlFactory->create($this->user, $this->getHttpRequest());
     }
 
     protected function createComponentLecturerControl(): LecturerControl
     {
         return $this->lecturerControlFactory->create($this->user, $this->getHttpRequest());
     }
+
+
 
 }

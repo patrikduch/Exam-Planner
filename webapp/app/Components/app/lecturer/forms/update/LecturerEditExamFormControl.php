@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Components\App\Lecturer;
+namespace App\Components\App\Lecturer\Forms\Update;
 
-use App\Helpers\Forms\MyValidator;
-use App\Helpers\Forms\MyValidators;
 use App\Infrastructure\Repositories\LecturerRepository;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
-use HttpRequest;
 use Nette\Application\UI\Control;
 use Nette\Http\IRequest;
 use Nette\Security\User;
 
-
-
-final class LecturerAddExamFormControl extends Control {
+/**
+ * Class LecturerEditExamFormControl
+ * @package App\Components\App\Lecturer\Forms\Update
+ */
+final class LecturerEditExamFormControl extends Control {
 
     /** @var LecturerRepository $lectureRepository */
     private  $lecturerRepository;
@@ -29,8 +28,9 @@ final class LecturerAddExamFormControl extends Control {
      */
     private $user;
 
+
     /**
-     * LecturerAddExamFormControl constructor.
+     * LecturerEditExamFormControl constructor.
      * @param User $user
      * @param LecturerRepository $lecturerRepository
      * @param IRequest $request
@@ -43,20 +43,24 @@ final class LecturerAddExamFormControl extends Control {
     }
 
     /**
-     * Renders LectureAddExamFormControl component that is responsible for adding new exam dates.
+     * Renders edit form for editing loaded exam detail.
      */
     public function render() {
 
-        $this->template->render(__DIR__ . '/LecturerAddExamFormControl.latte');
+        $this->template->exam_id = $this->httpRequest->getQuery("exam_id");
+
+        $this->template->render(__DIR__ . '/LecturerEditExamFormControl.latte');
     }
+
 
     /**
      * Add
      * @return BootstrapForm
      */
-    protected function createComponentAddExamForm(): BootstrapForm
+    protected function createComponentEditExamForm(): BootstrapForm
     {
         $lecturerEntity = $this->lecturerRepository->getLecturer($this->user->getId());
+        $examDetail = $this->lecturerRepository->getExamDetail($this->httpRequest->getQuery("exam_id"));
 
         $form = new BootstrapForm;
         $form->renderMode = RenderMode::VERTICAL_MODE;
@@ -84,43 +88,39 @@ final class LecturerAddExamFormControl extends Control {
         $secondRow= $form->addRow();
         $secondRow->addCell(4)
             ->addDateTime('startDate', 'Začátek termínu')
-            ->setRequired('Prosím zadejte začátetní termín');
+            ->setRequired('Prosím zadejte začátetní termín')
+            ->setDefaultValue($examDetail->exam_start_date);
 
 
         $thirdRow = $form->addRow();
         $thirdRow->addCell(4)
             ->addDateTime('endDate', 'Konec termínu')
             ->setRequired('Prosím zadejte konec termínu')
-            ->addRule(function($control, $args) {
-                $dateTimestamp1 = strtotime($args[1]);
-                $dateTimestamp2 = strtotime($args[0]->format('Y-m-d H:i:s'));
-
-                return $dateTimestamp1 > $dateTimestamp2;
-
-            }, 'Zkontrolujte rozmezi mezi začátečním a koncovým datem', [
-                $form['startDate'],
-                $form['endDate']
-            ]);
+            ->setDefaultValue($examDetail->exam_end_date);
 
         $fourthRow = $form->addRow();
         $fourthRow->addCell(4)
-            ->addSelect('lectureRoom','Místnost',$this->lecturerRepository->getLecturerRooms());
+            ->addSelect('lectureRoom','Místnost',$this->lecturerRepository->getLecturerRooms())
+            ->setDefaultValue($examDetail->room_code);
 
         $fifthRow = $form->addRow();
         $fifthRow->addCell(4)
             ->addText('roomSize',  'Počet míst')
             ->setRequired('Prosím zadejte maximální počet míst pro zadaný termín zkoušky')
-            ->addRule($form::INTEGER, 'Počet míst musí být platné číslo');
+            ->addRule($form::INTEGER, 'Počet míst musí být platné číslo')
+            ->setDefaultValue($examDetail->max_participants);
 
         $sixthRow = $form->addRow();
         $sixthRow->addCell(4)
             ->addText('note', 'Poznámka')
-            ->setRequired('Prosím zadejte poznamku pro zadaný termín');
+            ->setRequired('Prosím zadejte poznamku pro zadaný termín')
+            ->setDefaultValue($examDetail->note);
 
-        $form->addSubmit('send', 'Vytvořit termín');
+        $form->addSubmit('send', 'Upravit');
         $form->onSuccess[] = [$this, 'formSucceeded'];
         return $form;
     }
+
 
     /**
      * Process
@@ -130,13 +130,11 @@ final class LecturerAddExamFormControl extends Control {
      */
     public function formSucceeded(BootstrapForm $form, $data): void
     {
-        // tady zpracujeme data odeslaná formulářem
-        // $data->name obsahuje jméno
-        // $data->password obsahuje heslo
 
         $lecturerEntity = $this->lecturerRepository->getLecturer($this->user->getId());
 
-        $this->lecturerRepository->addNewExam(
+        $this->lecturerRepository->editExam(
+            $this->httpRequest->getQuery("exam_id"),
             $data->lectureRoom,
             $lecturerEntity->lecturer_code,
             $this->httpRequest->getQuery("courseCode"),
@@ -147,15 +145,7 @@ final class LecturerAddExamFormControl extends Control {
         );
 
 
-
-
-
-        $this->flashMessage('Nový termín byl úspěšně přidán.');
-        //$this->redirect('Lecturer:default');
-
+        $this->flashMessage('Nový termín byl úspěšně upraven.');
         $this->getPresenter()->redirect('Lecturer:default');
     }
-
-
 }
-

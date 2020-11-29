@@ -65,6 +65,7 @@ class StudentRepository implements  IStudentRepository {
     }
 
     /**
+     * Signout of exam.
      * @param int $examId
      * @param string $studentCode
      */

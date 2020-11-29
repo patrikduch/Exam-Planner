@@ -146,7 +146,55 @@ final class LecturerRepository implements ILecturerRepository {
     public function deleteExam(int $examId)
     {
         $this->database->beginTransaction();
+        $this->database->query('DELETE FROM ScheduledExam WHERE exam_id = ?', $examId);
         $this->database->query('DELETE FROM ExamDate WHERE exam_id = ?', $examId);
         $this->database->commit();
+    }
+
+    /**
+     * Fetch exam detail based on exam identifier.
+     * @param int $examId Numeric identifier of ExamDate entity.
+     */
+    public function getExamDetail(int $examId)
+    {
+       $resultSet =  $this->database->fetch('CALL pr_get_exam_detail(?)', $examId);
+       return $resultSet;
+    }
+
+    /**
+     * Update selected exam detail.
+     * @param int $examId
+     * @param string $room_code
+     * @param string $lecturerCode
+     * @param string $courseCode
+     * @param string $examStartDate
+     * @param string $examEndDate
+     * @param int $maxParticipants
+     * @param string $note
+     * @return void
+     */
+    public function editExam(
+        int $examId,
+        string $room_code,
+        string $lecturerCode,
+        string $courseCode,
+        string $examStartDate,
+        string $examEndDate,
+        int $maxParticipants,
+        string $note
+    )
+    {
+        $this->database->beginTransaction();
+        $result = $this->database->query('UPDATE ExamDate SET', [
+            'room_code' => $room_code,
+            'lecturer_code' => $lecturerCode,
+            'course_code' => $courseCode,
+            'exam_start_date' => $examStartDate,
+            'exam_end_date' => $examEndDate,
+            'max_participants' => $maxParticipants,
+            'note' => $note
+        ], 'WHERE exam_id = ?', $examId);
+        $this->database->commit();
+        return $result;
     }
 }

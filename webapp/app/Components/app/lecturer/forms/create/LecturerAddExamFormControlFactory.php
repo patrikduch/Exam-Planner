@@ -1,12 +1,16 @@
 <?php
 
-namespace App\Components\App\Lecturer;
+namespace App\Components\App\Lecturer\Forms\Create;
 
 use App\Infrastructure\Repositories\LecturerRepository;
 use HttpRequest;
 use Nette\Http\IRequest;
 use Nette\Security\User;
 
+/**
+ * Class LecturerAddExamFormControlFactory
+ * @package App\Components\App\Lecturer\Forms\Create
+ */
 final class LecturerAddExamFormControlFactory {
 
     /**
