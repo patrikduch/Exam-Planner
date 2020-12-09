@@ -65,21 +65,57 @@ class StudentRepository implements  IStudentRepository {
      * @param int $examId
      * @param bool $isActive
      * @param string $studentCode
-     * @return array|bool|int|iterable|Nette\Database\Table\ActiveRow|Nette\Database\Table\Selection|\Traversable
      */
     public function examSignout(int $examId, bool $isActive, string $studentCode)
     {
         if (!$isActive) {
-            return $this->database->table('ScheduledExam')->insert([
+
+            $this->database->beginTransaction();
+
+            $examDateEntity = $this->getExam($examId);
+
+            $this->database->query('UPDATE ExamDate SET', [
+                'max_participants' => $examDateEntity->max_participants -1,
+            ], 'WHERE exam_id = ?', $examId);
+
+
+            $this->database->table('ScheduledExam')->insert([
                 'exam_id' => $examId,
                 'student_code' => $studentCode,
                 'result_id' => NULL,
             ]);
+
+            $this->database->commit();
+
         } else {
-            return $this->database->query('DELETE FROM ScheduledExam 
+
+            $this->database->beginTransaction();
+
+            $examDateEntity = $this->getExam($examId);
+
+            $this->database->query('UPDATE ExamDate SET', [
+                'max_participants' => $examDateEntity->max_participants +1,
+            ], 'WHERE exam_id = ?', $examId);
+
+            $this->database->query('DELETE FROM ScheduledExam 
                                     WHERE exam_id = ? AND student_code = ?',
                                     $examId, $studentCode);
+
+            $this->database->commit();
         }
+    }
+
+    /**
+     * Fetch exam by its identifier (Primary key of ExamDate entity).
+     * @param int $examId Primary key of ExamDate entity.
+     */
+    public function getExam(int $examId)
+    {
+        $examDateEntity = $this->database->table('ExamDate')
+            ->where('exam_id', $examId)
+            ->fetch();
+
+        return $examDateEntity;
     }
 }
 

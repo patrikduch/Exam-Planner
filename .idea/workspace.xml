@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_active_student_list_exam.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_student_list_exams.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/student/StudentControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IStudentRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +118,7 @@
       <workItem from="1606600269661" duration="39986000" />
       <workItem from="1606733410889" duration="1207000" />
       <workItem from="1607429165633" duration="22408000" />
-      <workItem from="1607524134108" duration="11937000" />
+      <workItem from="1607524134108" duration="15793000" />
     </task>
     <servers />
   </component>
@@ -145,10 +146,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1606684264616" />
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1607476330559">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1607551582396">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1607476330559" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1607551582396" />
     <state x="431" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607480296430">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

@@ -50,9 +50,16 @@
                         <td>{$exam->exam_start_date}</td>
                         <td>{$exam->exam_end_date}</td>
                         <td>{$exam->course_credits}</td>
-                        <td>
-                            <a class="text-success" n:href="changeFoo! $exam->exam_id, $exam->is_exam_active, $studentDetail->student_code">Zapsat</a>
-                        </td>
+                        {if $exam->max_participants > 0}
+                            <td>
+                                <a class="text-success" n:href="changeFoo! $exam->exam_id, $exam->is_exam_active, $studentDetail->student_code">Zapsat</a>
+                            </td>
+                        {else}
+                            <td>
+                                <p class="text-danger">Obsazeno</p>
+                            </td>
+                        {/if}
+
                     {/if}
                 </tr>
             </tbody>
