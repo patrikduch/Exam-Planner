@@ -117,7 +117,7 @@ CREATE TABLE `StudentCourse` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `vypsane_terminy` ScheduledExam
+-- Structure of relation `ScheduledExam`
 --
 
 CREATE TABLE `ExamDate` (
@@ -133,7 +133,7 @@ CREATE TABLE `ExamDate` (
 
 
 --
--- Struktura tabulky `mistnosti` ExamRoom
+-- Structure of relation `ExamRoom`
 --
 
 CREATE TABLE `ExamRoom` (

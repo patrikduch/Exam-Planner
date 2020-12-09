@@ -15,8 +15,8 @@ INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, 
 
  INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
 ('DIMAN', 'Diskrétní matematika', 6, 40, 40, 'ZK',
-'Cílem předmětu je rozšíření znalostí a dovedností studenta v oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,
- problému vlastních čísel, aproximace funkcí, numerickou derivaci a numerický integrál.');
+'Úvod do diskrétní matematiky. Množiny, relace a funkce (rozšíření). Základy kombinatoriky a diskrétní pravděpodobnost. Logické funkce: formule, princip duality, rozklad funkce podle proměnných, funkcionální úplnost. Uspořádané struktury: množiny, svazy, Booleova algebra.' ||
+ 'Základy teorie grafů a grafové algoritmy.');
 
 
 
@@ -196,54 +196,36 @@ INSERT INTO User (username, PASSWORD, role) VALUES ('janosek', '$2y$12$SVW1hnbem
 INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
 VALUES ('jan01', 'Michael', 'Janošek', 10);
 
-INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('dyb02', 'XFUMO');
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('dyb02', 4, 3);
-
-
-
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('jan01', 'DIMAN');
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('jan01', 4, 3);
 
 
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','VYDAP');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','SWINZ');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','DIMAN');
+
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0014','VYDAP');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0014','XFUMO');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0014','NUMX2');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0014','SWINZ');
+
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('beb0019','VYDAP');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('beb0019','XFUMO');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('beb0019','SWINZ');
+
 
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','VYDAP');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','XFUMO');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','NUMX2');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','SWINZ');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','DIMAN');
 
 
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('nov0011','VYDAP');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('nov0011','XFUMO');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('nov0011','NUMX2');
+INSERT INTO StudentCourse (student_code, course_code) VALUES ('nov0011','SWINZ');
 
 
- INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');
-
- INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
-
-INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:20:00','2020-11-27:20:50',18, 'Zápočet předmětu VYDAP');
-
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (2, 'duc0016', NULL);
-INSERT INTO ExamResult (id, description, type) VALUES (2, 'Zápočet', 'P');
-
- INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');+
-
- INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:12:00','2020-11-27:13:50',18, 'Zápočet předmětu VYDAP');
-
-
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (4, 'duc0016', NULL);
-
-
-INSERT INTO ExamResult (description, type) VALUES ('Zápočet', 'N');
-INSERT INTO ExamResult (description, type) VALUES ('Zápočet', 'N');
-
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'A');
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'B');
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'C');
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'D');
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'E');
-INSERT INTO ExamResult (description, type) VALUES ('Zkouška', 'F');

@@ -46,6 +46,10 @@ https://www.geeksforgeeks.org/comparing-two-dates-in-php/
 https://forum.nette.org/cs/25303-refresh-stranky-po-akci-ktera-jen-meni-data
 
 
+# DB preparation
+
+/db/  SQL scripts = all scripts must be manually executed on MySQL database, which runs in the separate docker container.
+
 
 # Task
 
@@ -62,3 +66,9 @@ Po přihlášení pedagoga bude moci vyučující vytvářet, upravovat nebo maz
 Po přihlášení studenta se studentovi zobrazí vypsané termíny pro předměty, které studuje. Student se bude moci zapisovat na termín nebo se z nich odhlašovat.
 
 Vytvořený systém budete prezentovat u zápočtu - buď na svém notebooku nebo dostanete k dispozici jiný počítač, kde bude nainstalováno vše potřebné (PHP, Apache, MySQL).
+
+
+
+# Github url
+
+https://github.com/patrikduch/Exam-Planner
