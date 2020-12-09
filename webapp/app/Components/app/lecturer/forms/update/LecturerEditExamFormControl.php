@@ -2,7 +2,7 @@
 
 namespace App\Components\App\Lecturer\Forms\Update;
 
-use App\Dtos\ExamDateCreateRequest;
+use App\Dtos\ExamDateUpdateRequest;
 use App\Infrastructure\Repositories\LecturerRepository;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
@@ -136,7 +136,7 @@ final class LecturerEditExamFormControl extends Control {
         $lecturerEntity = $this->lecturerRepository->getLecturer($this->user->getId());
 
         // 2. Creation of DTO for updating current  exam date
-        $examDto = new ExamDateCreateRequest(
+        $examDto = new ExamDateUpdateRequest(
             $this->httpRequest->getQuery("exam_id"), $data->lectureRoom,
             $lecturerEntity->lecturer_code, $this->httpRequest->getQuery("courseCode"),
             $data->startDate->format('Y-m-d H:i:s'),

@@ -2,9 +2,9 @@
 
 namespace App\Dtos;
 
-
-class ExamDateCreateRequest
+class ExamDateUpdateRequest
 {
+    private int $examId;
     private string $roomCode;
     private string $lecturerCode;
     private string $courseCode;
@@ -14,10 +14,12 @@ class ExamDateCreateRequest
     private string $note;
 
 
-    public function __construct(string $roomCode, string $lecturerCode,
+    public function __construct(int $examId, string $roomCode, string $lecturerCode,
                                 string $courseCode, string $examStartDate, string $examEndDate,
                                 int $maxParticipants, string $note)
     {
+
+        $this->examId = $examId;
         $this->roomCode = $roomCode;
         $this->lecturerCode = $lecturerCode;
         $this->courseCode = $courseCode;
@@ -25,6 +27,15 @@ class ExamDateCreateRequest
         $this->examEndDate = $examEndDate;
         $this->maxParticipants = $maxParticipants;
         $this->note = $note;
+    }
+
+
+    public function getExamId(): int {
+        return $this->examId;
+    }
+
+    public function setExamId(int $examId): void {
+        $this->examId = $examId;
     }
 
     public function getRoomCode(): string {

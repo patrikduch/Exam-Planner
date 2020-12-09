@@ -2,12 +2,12 @@
 
 namespace App\Components\App\Lecturer\Forms\Create;
 
+use App\Dtos\ExamDateCreateRequest;
 use App\Helpers\Forms\MyValidator;
 use App\Helpers\Forms\MyValidators;
 use App\Infrastructure\Repositories\LecturerRepository;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
-use HttpRequest;
 use Nette\Application\UI\Control;
 use Nette\Http\IRequest;
 use Nette\Security\User;
@@ -139,7 +139,10 @@ final class LecturerAddExamFormControl extends Control {
 
         $lecturerEntity = $this->lecturerRepository->getLecturer($this->user->getId());
 
-        $this->lecturerRepository->addNewExam(
+
+
+        // 2. Creation of DTO for updating current  exam date
+        $examDto = new ExamDateCreateRequest(
             $data->lectureRoom,
             $lecturerEntity->lecturer_code,
             $this->httpRequest->getQuery("courseCode"),
@@ -148,6 +151,10 @@ final class LecturerAddExamFormControl extends Control {
             $data->roomSize,
             $data->note
         );
+
+
+        $this->lecturerRepository->addNewExam($examDto);
+
 
 
         $this->flashMessage('Nový termín byl úspěšně přidán.');

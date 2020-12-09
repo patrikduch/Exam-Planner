@@ -4,6 +4,7 @@ namespace  App\Infrastructure\Repositories;
 
 use App\Core\Interfaces\Repositories\ILecturerRepository;
 use App\Dtos\ExamDateCreateRequest;
+use App\Dtos\ExamDateUpdateRequest;
 use Nette;
 
 /**
@@ -109,35 +110,22 @@ final class LecturerRepository implements ILecturerRepository {
         return $getLecturerRooms;
     }
 
+
     /**
-     * Adding new exam date for students to sign.
-     * @param string $room_code
-     * @param string $lecturerCode
-     * @param string $courseCode
-     * @param string $examStartDate
-     * @param string $examEndDate
-     * @param int $maxParticipants
-     * @param string $note
+     * Create new exam date based on passed ExamDateCreateRequest DTO properties.
+     * @param ExamDateCreateRequest $examDto
      * @return array|bool|int|iterable|Nette\Database\Table\ActiveRow|Nette\Database\Table\Selection|\Traversable
      */
-    public function addNewExam(
-        string $room_code,
-        string $lecturerCode,
-        string $courseCode,
-        string $examStartDate,
-        string $examEndDate,
-        int $maxParticipants,
-        string $note
-    )
+    public function addNewExam(ExamDateCreateRequest $examDto)
     {
         $row = $this->database->table('ExamDate')->insert([
-            'room_code' => $room_code,
-            'lecturer_code' => $lecturerCode,
-            'course_code' => $courseCode,
-            'exam_start_date' => $examStartDate,
-            'exam_end_date' => $examEndDate,
-            'max_participants' => $maxParticipants,
-            'note' => $note
+            'room_code' => $examDto->getRoomCode(),
+            'lecturer_code' => $examDto->getLecturerCode(),
+            'course_code' => $examDto->getCourseCode(),
+            'exam_start_date' => $examDto->getExamStartDate(),
+            'exam_end_date' => $examDto->getExamEndDate(),
+            'max_participants' => $examDto->getMaxParticipants(),
+            'note' => $examDto->getNote()
         ]);
 
         return $row;
@@ -182,11 +170,10 @@ final class LecturerRepository implements ILecturerRepository {
 
     /**
      * Edit chosen exam.
-     * @param ExamDateCreateRequest $dto
+     * @param ExamDateUpdateRequest $dto
      */
-    public function editExam(ExamDateCreateRequest $dto)
+    public function editExam(ExamDateUpdateRequest $dto)
     {
-        // TODO: Implement editExam() method.
 
         $this->database->beginTransaction();
 
