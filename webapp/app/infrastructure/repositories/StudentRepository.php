@@ -30,10 +30,9 @@ class StudentRepository implements  IStudentRepository {
     {
        //$resultSet = $this->database->fetch('CALL pr_get_student(?)', $userId);
 
-       $resultSet = $this->database->fetch('
-        SELECT *
-	    FROM Student
-	    WHERE user_id = ?;', $userId);
+       $resultSet = $this->database->table('Student')
+           ->where('user_id', $userId)
+           ->fetch();
 
        return $resultSet;
     }
@@ -46,6 +45,7 @@ class StudentRepository implements  IStudentRepository {
     public function getActiveStudentExams(string $studentCode)
     {
         $resultSet = $this->database->fetchAll('CALL pr_get_active_student_list_exams(?)', $studentCode);
+
         return $resultSet;
     }
 
@@ -76,9 +76,9 @@ class StudentRepository implements  IStudentRepository {
                 'result_id' => NULL,
             ]);
         } else {
-            return $this->database->table('ScheduledExam')
-                ->where('exam_id', $examId)
-                ->delete();
+            return $this->database->query('DELETE FROM ScheduledExam 
+                                    WHERE exam_id = ? AND student_code = ?',
+                                    $examId, $studentCode);
         }
     }
 }

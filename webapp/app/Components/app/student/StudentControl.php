@@ -46,8 +46,15 @@ final class StudentControl extends  Control {
         $this->template->studentDetail = $studentDetail;
 
         $this->template->allExams = $this->studentRepository->getStudentExamList($studentDetail->student_code);
+
+        dump($studentDetail);
+
+
         $this->template->activeExams = $this->studentRepository
             ->getActiveStudentExams(($studentDetail->student_code));
+
+        dump($this->template->activeExams);
+
 
         $this->template->render(__DIR__ . '/StudentControl.latte');
     }
