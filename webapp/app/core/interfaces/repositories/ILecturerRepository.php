@@ -2,6 +2,8 @@
 
 namespace App\Core\Interfaces\Repositories;
 
+use App\Dtos\ExamDateCreateRequest;
+
 /**
  * Interface ILecturerRepository
  * @package App\Core\Interfaces\Repositories
@@ -20,8 +22,7 @@ interface ILecturerRepository {
     public function addNewExam(string $room_code, string $lecturerCode, string $courseCode, string $examStartDate,
                                 string $examEndDate, int $maxParticipants, string $note);
 
-    public function editExam(int $examId, string $room_code, string $lecturerCode, string $courseCode, string $examStartDate,
-                             string $examEndDate, int $maxParticipants, string $note);
+    public function editExam(ExamDateCreateRequest $dto);
 
     public function deleteExam(int $examId);
 }

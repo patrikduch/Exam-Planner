@@ -27,5 +27,5 @@
       <path value="$PROJECT_DIR$/webapp/vendor/nette/component-model" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
 </project>

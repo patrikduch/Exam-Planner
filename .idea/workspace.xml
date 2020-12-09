@@ -20,20 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c10cacc-67c4-4879-b8e7-3a23ee8f28bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/drop.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/procedures/student/pr_get_students_assignment_list.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/relationships.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/insert-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/lecturer/ pr_get_exam_detail.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_pre_degrees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/procedures/lecturer/pr_get_lecturer_pre_degrees.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/procedures/student/pr_get_get_student.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/LecturerControl.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/update/LecturerEditExamFormControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/app/lecturer/forms/update/LecturerEditExamFormControl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Dtos/ExamDateCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Dtos/ExamDateCreateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/ILecturerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/LecturerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/StudentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +118,7 @@
       <workItem from="1606483022412" duration="38234000" />
       <workItem from="1606600269661" duration="39986000" />
       <workItem from="1606733410889" duration="1207000" />
-      <workItem from="1607429165633" duration="16630000" />
+      <workItem from="1607429165633" duration="21042000" />
     </task>
     <servers />
   </component>
@@ -153,10 +146,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1606684264616" />
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1606694247240">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1607476330559">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1606694247240" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1607476330559" />
     <state x="584" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606670025883">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

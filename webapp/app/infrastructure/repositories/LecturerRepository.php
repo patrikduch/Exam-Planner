@@ -3,6 +3,7 @@
 namespace  App\Infrastructure\Repositories;
 
 use App\Core\Interfaces\Repositories\ILecturerRepository;
+use App\Dtos\ExamDateCreateRequest;
 use Nette;
 
 /**
@@ -166,42 +167,7 @@ final class LecturerRepository implements ILecturerRepository {
        return $resultSet;
     }
 
-    /**
-     * Update selected exam detail.
-     * @param int $examId
-     * @param string $room_code
-     * @param string $lecturerCode
-     * @param string $courseCode
-     * @param string $examStartDate
-     * @param string $examEndDate
-     * @param int $maxParticipants
-     * @param string $note
-     * @return void
-     */
-    public function editExam(
-        int $examId,
-        string $room_code,
-        string $lecturerCode,
-        string $courseCode,
-        string $examStartDate,
-        string $examEndDate,
-        int $maxParticipants,
-        string $note
-    )
-    {
-        $this->database->beginTransaction();
-        $result = $this->database->query('UPDATE ExamDate SET', [
-            'room_code' => $room_code,
-            'lecturer_code' => $lecturerCode,
-            'course_code' => $courseCode,
-            'exam_start_date' => $examStartDate,
-            'exam_end_date' => $examEndDate,
-            'max_participants' => $maxParticipants,
-            'note' => $note
-        ], 'WHERE exam_id = ?', $examId);
-        $this->database->commit();
-        return $result;
-    }
+
 
     /**
      * Fetch all students for exam assigment.
@@ -212,5 +178,30 @@ final class LecturerRepository implements ILecturerRepository {
     {
        $resultSet =  $this->database->fetchAll('CALL pr_get_students_assignment_list(?,?)', $courseCode, $examId);
        return $resultSet;
+    }
+
+    /**
+     * Edit chosen exam.
+     * @param ExamDateCreateRequest $dto
+     */
+    public function editExam(ExamDateCreateRequest $dto)
+    {
+        // TODO: Implement editExam() method.
+
+        $this->database->beginTransaction();
+
+        $result = $this->database->query('UPDATE ExamDate SET', [
+            'room_code' => $dto->getRoomCode(),
+            'lecturer_code' => $dto->getLecturerCode(),
+            'course_code' => $dto->getCourseCode(),
+            'exam_start_date' => $dto->getExamStartDate(),
+            'exam_end_date' => $dto->getExamEndDate(),
+            'max_participants' => $dto->getMaxParticipants(),
+            'note' => $dto->getNote()
+        ], 'WHERE exam_id = ?', $dto->getExamId());
+
+        $this->database->commit();
+
+        return $result;
     }
 }

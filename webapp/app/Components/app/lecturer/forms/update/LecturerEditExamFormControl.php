@@ -2,6 +2,7 @@
 
 namespace App\Components\App\Lecturer\Forms\Update;
 
+use App\Dtos\ExamDateCreateRequest;
 use App\Infrastructure\Repositories\LecturerRepository;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
@@ -131,18 +132,21 @@ final class LecturerEditExamFormControl extends Control {
     public function formSucceeded(BootstrapForm $form, $data): void
     {
 
+        // 1. Fetch lecturer entity for access to lecturerCode
         $lecturerEntity = $this->lecturerRepository->getLecturer($this->user->getId());
 
-        $this->lecturerRepository->editExam(
-            $this->httpRequest->getQuery("exam_id"),
-            $data->lectureRoom,
-            $lecturerEntity->lecturer_code,
-            $this->httpRequest->getQuery("courseCode"),
+        // 2. Creation of DTO for updating current  exam date
+        $examDto = new ExamDateCreateRequest(
+            $this->httpRequest->getQuery("exam_id"), $data->lectureRoom,
+            $lecturerEntity->lecturer_code, $this->httpRequest->getQuery("courseCode"),
             $data->startDate->format('Y-m-d H:i:s'),
             $data->endDate->format('Y-m-d H:i:s'),
             $data->roomSize,
             $data->note
         );
+
+        // 3. Execute Update command with created ExamDate DTO
+        $this->lecturerRepository->editExam($examDto);
 
 
         $this->flashMessage('Nový termín byl úspěšně upraven.');
