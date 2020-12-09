@@ -58,7 +58,7 @@
             </thead>
             <tbody>
             <tr n:foreach="$lecturerExams as $lecturerExam">
-                <th scope="row">{$course->course_code}</th>
+                <th scope="row">{$lecturerExam->course_code}</th>
                 <td>{$lecturerExam->room_code}</td>
                 <td>{$lecturerExam->note}</td>
                 <td>{$lecturerExam->exam_start_date}</td>

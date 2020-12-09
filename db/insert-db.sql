@@ -13,6 +13,13 @@ INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, 
  problému vlastních čísel, aproximace funkcí, numerickou derivaci a numerický integrál.');
 
 
+ INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
+('DIMAN', 'Diskrétní matematika', 6, 40, 40, 'ZK',
+'Cílem předmětu je rozšíření znalostí a dovedností studenta v oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,
+ problému vlastních čísel, aproximace funkcí, numerickou derivaci a numerický integrál.');
+
+
+
 INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
 ('NUMX1', 'Úvod do numerické matematiky', 6, 40, 40, 'ZP',
 'Cílem předmětu je úvod do oblasti numerické matematiky, konkrétně o řešení soustav lineárních algebraických rovnic,
@@ -158,7 +165,39 @@ INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
 VALUES ('zac05', 'Jaroslav', 'žáček', 8);
 
 INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('zac05', 'SWINZ');
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('zac05', 'XRPR1');
 INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('zac05', 4, 3);
+
+
+/* Fourth lecturer */
+
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('dyba', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('dyb02', 'Martin', 'Dyba', 9);
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('dyb02', 'XFUMO');
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('dyb02', 4, 3);
+
+
+
+/* Fourth lecturer */
+
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('janosek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('jan01', 'Michael', 'Janošek', 10);
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('dyb02', 'XFUMO');
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('dyb02', 4, 3);
 
 
 

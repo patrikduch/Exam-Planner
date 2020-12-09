@@ -83,6 +83,7 @@ final class LecturerRepository implements ILecturerRepository {
         $activeExams = $this->database->fetchAll(
             'CALL pr_get_lecturer_exams(?,?)', $lecturerCode, true
         );
+
         return $activeExams;
     }
 
