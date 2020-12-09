@@ -28,7 +28,12 @@ class StudentRepository implements  IStudentRepository {
      */
     public function getStudentDetails(int $userId)
     {
-       $resultSet = $this->database->fetch('CALL pr_get_student(?)', $userId);
+       //$resultSet = $this->database->fetch('CALL pr_get_student(?)', $userId);
+
+       $resultSet = $this->database->fetch('
+        SELECT *
+	    FROM Student
+	    WHERE user_id = ?;', $userId);
 
        return $resultSet;
     }

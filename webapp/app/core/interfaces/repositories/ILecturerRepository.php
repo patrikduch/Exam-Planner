@@ -15,6 +15,8 @@ interface ILecturerRepository {
     public function getLecturerPostDegrees(string $lecturerCode);
     public function getLecturerRooms();
     public function getExamDetail(int $examId);
+    public function getStudentAssignmentList(string $courseCode, int $examId);
+
     public function addNewExam(string $room_code, string $lecturerCode, string $courseCode, string $examStartDate,
                                 string $examEndDate, int $maxParticipants, string $note);
 

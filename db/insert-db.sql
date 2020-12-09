@@ -1,58 +1,10 @@
 INSERT INTO ProjectDetail (name) VALUES ('Exam planner');
 
-
---- Degree
 INSERT INTO Degree (name) VALUES ('Bc');
 INSERT INTO Degree (name) VALUES ('Mgr');
 INSERT INTO Degree (name) VALUES ('PhD');
 INSERT INTO Degree (name) VALUES ('RNDr');
 INSERT INTO Degree (name) VALUES ('Doc');
-
-
-
-INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
-/*
-    password: patrikduch
-*/
-
-INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
-
-INSERT INTO User (username, PASSWORD, role) VALUES ('silber', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
-/*
-    password: patrikduch
-*/
-
-INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('sil0014', 'Tomáš', 'Silber', 5);
-
-
-INSERT INTO User (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
-/*
-    password: patrikduch
-*/
-
-INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
-VALUES ('wal45', 'Bogdan', 'Walek', 2);
-
-INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('wal45', 'VYDAP');
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('wal45', 4, 3);
-
-INSERT INTO User (username, PASSWORD, role) VALUES ('sustek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
-/*
-    password: patrikduch
-*/
-
-INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
-VALUES ('sust22', 'Jan', 'Sustek', 3);
-
-
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 5, 3);
-INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 4, NULL);
-
-
-
-INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX1');
-INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX2');
-
 
 
 INSERT INTO Course (course_code, title, credits, lecture_hours, practice_hours, classification, annotation) VALUES
@@ -91,6 +43,127 @@ Cílem předmětu je naučit studenta orientovat se ve vývoji a vlastním návr
 
 
 
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c116', 'Budova C', 15);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c112', 'Budova C', 10);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c111', 'Budova C', 12);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a330', 'Budova A', 20);
+INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a210', 'Budova A', 15);
+
+
+
+/* 1. */
+
+
+/* First student */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('duch', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0016', 'Patrik', 'Duch', 1);
+
+
+
+/* Second student. */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('silber', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
+
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('sil0014', 'Tomáš', 'Silber', 2);
+
+
+
+/* Third student. */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('duchova', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
+
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('duc0014', 'Petra', 'Duchová', 3);
+
+
+/* Fourth student. */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('bebcak', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
+
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('beb0019', 'Josef', 'Bebcčák', 4);
+
+
+/* Fifth student. */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('novak', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'student');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Student (student_code, first_name, surname, user_id) VALUES ('nov0011', 'Jan', 'Novák', 5);
+
+
+
+
+/* First lecturer */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('walek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('wal45', 'Bogdan', 'Walek', 6);
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('wal45', 'VYDAP');
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('wal45', 4, 3);
+
+
+
+/* Second lecturer */
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('sustek', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('sust22', 'Jan', 'Sustek', 7);
+
+
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 5, 3);
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('sust22', 4, NULL);
+
+
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX1');
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('sust22', 'NUMX2');
+
+
+/* Third lecturer */
+
+
+INSERT INTO User (username, PASSWORD, role) VALUES ('zacekj', '$2y$12$SVW1hnbemwCWRUZa2urzYO78.w3ySfysvG.08CQeiKaJfMO8Nyb/m', 'lecturer');
+/*
+    password: patrikduch
+*/
+
+INSERT INTO Lecturer (lecturer_code, first_name, surname, user_id)
+VALUES ('zac05', 'Jaroslav', 'žáček', 8);
+
+INSERT INTO LecturerCourse  (lecturer_code, course_code) VALUES ('zac05', 'SWINZ');
+INSERT INTO LecturerDegree(lecturer_code, pre_Degree_id, post_degree_id) VALUES ('zac05', 4, 3);
+
+
+
+
+
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','VYDAP');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','XFUMO');
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('duc0016','NUMX2');
@@ -102,30 +175,18 @@ INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','NUMX2')
 INSERT INTO StudentCourse (student_code, course_code) VALUES ('sil0014','SWINZ');
 
 
-INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c116', 'Budova C', 15);
-INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c112', 'Budova C', 10);
-INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('c111', 'Budova C', 12);
-INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a330', 'Budova A', 20);
-INSERT INTO ExamRoom (room_code, description, capacity) VALUES ('a210', 'Budova A', 15);
+
 
  INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
  VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');
 
-INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
- VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:19:00','2020-11-27:19:50',18, 'Zápočet předmětu VYDAP');
-
- INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (2, 'duc0016', NULL);
-
-
+ INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
 
 INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
  VALUES ('c116', 'wal45', 'VYDAP', '2020-11-27:20:00','2020-11-27:20:50',18, 'Zápočet předmětu VYDAP');
 
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
-INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
-
-INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (1, 'duc0016', NULL);
-INSERT INTO ExamResult (id, description, type) VALUES (1, 'Zápočet', 'P');
+INSERT INTO ScheduledExam (exam_id, student_code, result_id) VALUES (2, 'duc0016', NULL);
+INSERT INTO ExamResult (id, description, type) VALUES (2, 'Zápočet', 'P');
 
  INSERT INTO ExamDate (room_code, lecturer_code, course_code, exam_start_date, exam_end_date, max_participants, note)
  VALUES ('c116', 'wal45', 'VYDAP', '2020-11-30:12:00','2020-11-30:13:50',18, 'Zápočet předmětu VYDAP');+

@@ -1,0 +1,13 @@
+DROP TABLE LecturerCourse;
+DROP TABLE LecturerDegree;
+DROP TABLE ScheduledExam;
+DROP TABLE ExamDate;
+DROP TABLE Lecturer;
+DROP TABLE Degree;
+DROP TABLE StudentCourse;
+DROP TABLE Student;
+DROP TABLE Course;
+DROP TABLE ExamResult;
+DROP TABLE ExamRoom;
+DROP TABLE ProjectDetail;
+DROP TABLE User;

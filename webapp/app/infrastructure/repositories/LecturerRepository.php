@@ -31,7 +31,10 @@ final class LecturerRepository implements ILecturerRepository {
      */
     public function getLecturer(int $id)
     {
-        $resultSet = $this->database->fetch('CALL get_lecturer(?)', $id);
+        $resultSet = $this->database->table('Lecturer')
+            ->where('user_id',$id)
+            ->fetch();
+
         return $resultSet;
     }
 
@@ -157,7 +160,9 @@ final class LecturerRepository implements ILecturerRepository {
      */
     public function getExamDetail(int $examId)
     {
-       $resultSet =  $this->database->fetch('CALL pr_get_exam_detail(?)', $examId);
+       $resultSet =  $this->database->table('ExamDate')
+           ->where('exam_id', $examId)
+           ->fetch();
        return $resultSet;
     }
 
@@ -196,5 +201,16 @@ final class LecturerRepository implements ILecturerRepository {
         ], 'WHERE exam_id = ?', $examId);
         $this->database->commit();
         return $result;
+    }
+
+    /**
+     * Fetch all students for exam assigment.
+     * @param string $courseCode
+     * @param int $examId
+     */
+    public function getStudentAssignmentList(string $courseCode, int $examId)
+    {
+       $resultSet =  $this->database->fetchAll('CALL pr_get_students_assignment_list(?,?)', $courseCode, $examId);
+       return $resultSet;
     }
 }
